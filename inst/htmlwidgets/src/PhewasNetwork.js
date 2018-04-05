@@ -1,8 +1,7 @@
 const setupRenderer = require('./SetupRenderer.js');
 
-//const makeTooltip = require('./MakeTooltip.js');
-//const resetTooltip = require('./ResetTooltip.js');
 const Tooltip = require('./Tooltip.js');
+const ProgressMessage = require('./ProgressMessage.js');
 
 const generatePointPositions = require('./GeneratePointPositions.js');
 const generateEdgePositions = require('./GenerateEdgePositions.js');
@@ -68,8 +67,12 @@ class phewasNetwork{
         max_iterations: 250,      // Number of iterations the layout simulation runs
         manybody_strength: -1,    // Attractive force between nodes irrespective of links
         link_strength: null,      // attractive force of links. Falsy values default to a function of number of connections.
+        show_simulation_progress: true, // show small popup while layout is being calculated?
       }
     };
+    this.manybody_strength = -1;
+    this.static_length_strength = true;
+    this.link_strength = 1;
 
     // setup vector for holding mouse position for raycaster
     this.mouse = new THREE.Vector2(100, 100);
@@ -104,6 +107,8 @@ class phewasNetwork{
 
     // append a small div to act as our tooltip
     this.tooltip = new Tooltip(el);
+
+    this.simulation_progress = new ProgressMessage(el);
 
     // three color object for generating color vectors
     this.color = new THREE.Color();
@@ -163,6 +168,28 @@ class phewasNetwork{
     this.iteration = 0;
   }
 
+  // update simulation constants
+  updateSim(manybody, link){
+
+    const manybody_strength = this.manybody_strength;
+    const link_strength = this.link_strength;
+    const static_links = this.static_length_strength;
+
+    this.simulation
+      .force("link",
+        static_links ?
+          d3.forceLink(this.links).id(d => d.id).strength(link_strength):
+          d3.forceLink(this.links).id(d => d.id)
+      )
+      .force("charge",
+        d3.forceManyBody()
+          .strength(manybody_strength)
+      )
+      .alpha(1);
+
+    this.iteration = 0;
+  }
+
   resize(width, height) {
     this.renderer.setSize(width, height);
     this.width = width;
@@ -207,6 +234,8 @@ class phewasNetwork{
     for(let section in this.constants){
       Object.assign(this.constants[section], settings[section]);
     }
+
+    this.max_iterations = this.constants.misc.max_iterations;
 
     // Setup tooltip offset
     this.tooltip.setOffset(this.constants.misc.tooltip_offset);
@@ -286,13 +315,24 @@ class phewasNetwork{
     requestAnimationFrame(() => this.render());
 
     // Only iterate through the layout for a given number of steps.
-    if(this.iteration < this.constants.misc.max_iterations){
+    if(this.iteration < this.max_iterations){
       // run instances of our layout simulation
       this.simulation.tick();
 
       // update mesh attributes.
       this.updatePositions();
       this.iteration += 1;
+
+      // does the user want a progress message
+      if(this.constants.misc.show_simulation_progress){
+        // if this is our last iteration we should hide the progress
+        if(this.iteration === this.max_iterations){
+         this.simulation_progress.hide();
+        } else {
+          // otherwise let's increment it.
+          this.simulation_progress.update(this.iteration);
+        }
+      }
     }
 
     if(this.constants.misc.interactive){

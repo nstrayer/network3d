@@ -200,3 +200,5 @@ Error: Cannot find module './makeNodeMaterial.js' from '/home/nick/fast_bind/net
 
 Error: Cannot find module '../BuildNodes.js' from '/home/nick/fast_bind/network3d/inst/htmlwidgets/src'
 Error: Cannot find module '../BuildNodes.js' from '/home/nick/fast_bind/network3d/inst/htmlwidgets/src'
+Error: Parsing file /home/nick/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js: Unexpected token (118:24)
+Error: Parsing file /home/nick/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js: Unexpected token (182:48)

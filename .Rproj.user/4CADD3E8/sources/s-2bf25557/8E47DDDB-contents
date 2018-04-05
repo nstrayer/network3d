@@ -23,8 +23,5 @@ data <- makeNetworkData(2000)
 
 
 devtools::install()
-library(network3d)
-network3d(
-  data
-)
+network3d::network3d(data, max_iterations = 75)
 
