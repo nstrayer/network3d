@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522953481121.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4000265934",
+    "id" : "20499BC7",
+    "lastKnownWriteTime" : 1522955928,
+    "last_content_update" : 1522955928275,
+    "path" : "~/fast_bind/network3d/inst/htmlwidgets/src/main.js",
+    "project_path" : "inst/htmlwidgets/src/main.js",
+    "properties" : {
+        "cursorPosition" : "28,8",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "js"
+}

@@ -1,0 +1,13 @@
+module.exports = function setupControls(camera, renderer, constants){
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+  // assign settings to controls
+  for(let setting in constants.controls){
+    controls[setting] = constants.controls[setting];
+  }
+
+  const cnt = constants.camera.center;
+  controls.target.set( cnt.x,cnt.y,cnt.z );
+
+  return controls;
+};

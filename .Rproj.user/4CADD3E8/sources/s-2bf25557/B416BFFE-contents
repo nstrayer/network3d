@@ -1,0 +1,11 @@
+module.exports = function makeTooltip(el){
+  return d3.select(el)
+      .append('div')
+      .html('')
+      .style('background', 'white')
+      .style('border-radius', '10px')
+      .style('padding', '0px 15px')
+      .style('box-shadow', '1px 1px 3px black')
+      .style('position', 'fixed')
+      .style('display', 'none');
+};

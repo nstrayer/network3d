@@ -1,0 +1,6 @@
+// raycaster with given resolution
+module.exports = function setupRaycaster(constants){
+  const raycaster = new THREE.Raycaster();
+  raycaster.params.Points.threshold = constants.sizes.raycast_res;
+  return raycaster;
+};

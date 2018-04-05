@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522953270780.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1039858432",
+    "id" : "8E47DDDB",
+    "lastKnownWriteTime" : 1522957550,
+    "last_content_update" : 1522957550856,
+    "path" : "~/fast_bind/network3d/build_and_run.R",
+    "project_path" : "build_and_run.R",
+    "properties" : {
+        "cursorPosition" : "26,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

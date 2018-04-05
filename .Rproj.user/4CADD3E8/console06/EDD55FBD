@@ -1,0 +1,149 @@
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ [K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ cd inst/htmlwidgets/
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ ls
+total 108K
+drwxr-xr-x   5 nick nick 4.0K Apr  5 11:08 [0m[01;34m.[0m
+drwxr-xr-x   3 nick nick 4.0K Apr  5 10:36 [01;34m..[0m
+drwxr-xr-x   2 nick nick 4.0K Apr  5 10:37 [01;34mlib[0m
+-rw-r--r--   1 nick nick 2.3K Apr  5 11:14 network3d.js
+-rw-r--r--   1 nick nick  254 Apr  5 10:38 network3d.yaml
+drwxr-xr-x 175 nick nick 4.0K Apr  5 10:44 [01;34mnode_modules[0m
+-rw-r--r--   1 nick nick  21K Apr  5 10:39 oldNetworkJS.js
+-rw-r--r--   1 nick nick  440 Apr  5 11:04 package.json
+-rw-r--r--   1 nick nick  52K Apr  5 10:44 package-lock.json
+drwxr-xr-x   2 nick nick 4.0K Apr  5 11:19 [01;34msrc[0m
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ cd src/
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ ls
+total 32K
+drwxr-xr-x 2 nick nick 4.0K Apr  5 11:19 [0m[01;34m.[0m
+drwxr-xr-x 5 nick nick 4.0K Apr  5 11:08 [01;34m..[0m
+-rw-r--r-- 1 nick nick  778 Apr  5 11:16 GenerateEdgePositions.js
+-rw-r--r-- 1 nick nick  406 Apr  5 11:19 GeneratePointPositions.js
+-rw-r--r-- 1 nick nick  580 Apr  5 11:14 main.js
+-rw-r--r-- 1 nick nick 1021 Apr  5 11:13 MakeNodeMaterial.js
+-rw-r--r-- 1 nick nick  394 Apr  5 11:15 MakeRenderer.js
+-rw-r--r-- 1 nick nick   88 Apr  5 11:08 testing.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch Generate PointStatit[KcAttrs.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch BuildEdg es.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch buil[K[K[K[KBuildNod es
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ mv BuildNodes  BU[KuildNodes [K.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ mv Setui[KpScene
+mv: missing destination file operand after 'SetupScene'
+Try 'mv --help' for more information.
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touc Set[K[K[K[K[Kh[Kch SetupSce ne.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch s[KSetupCam era.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch Setui[Kp[[KCon trols.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch SetupRay caster.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch SetupSim ulation.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch Mka[K[KakeTool tip.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch ResetTop [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co ltip.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch PhewasNe twork.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ [K]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch p[KPhewasNetworkFull.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ [K]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touc tool[K[K[K[K[Kh tool[K[K[K[KTooltip.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ [K]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ vim.[K .giot[K[Ktignore
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ git init
+Initialized empty Git repository in /home/nick/fast_bind/network3d/inst/htmlwidgets/src/.git/
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ git remote add origin git@github.com:nstrayer/network3d.git
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ lgit "ported over from bipartite library and things are working with a  basic example thus far"
+[master (root-commit) 3345320] ported over from bipartite library and things are working with a basic example thus far
+ 17 files changed, 953 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 BuildEdges.js
+ create mode 100644 BuildNodes.js
+ create mode 100644 GenerateEdgePositions.js
+ create mode 100644 GeneratePointPositions.js
+ create mode 100644 GeneratePointStaticAttrs.js
+ create mode 100644 MakeNodeMaterial.js
+ create mode 100644 PhewasNetwork.js
+ create mode 100644 PhewasNetworkFull.js
+ create mode 100644 SetupCamera.js
+ create mode 100644 SetupControls.js
+ create mode 100644 SetupRaycaster.js
+ create mode 100644 SetupRenderer.js
+ create mode 100644 SetupScene.js
+ create mode 100644 SetupSimulation.js
+ create mode 100644 Tooltip.js
+ create mode 100644 main.js
+Counting objects: 19, done.
+Delta compression using up to 8 threads.
+Compressing objects:   5% (1/18)   Compressing objects:  11% (2/18)   Compressing objects:  16% (3/18)   Compressing objects:  22% (4/18)   Compressing objects:  27% (5/18)   Compressing objects:  33% (6/18)   Compressing objects:  38% (7/18)   Compressing objects:  44% (8/18)   Compressing objects:  50% (9/18)   Compressing objects:  55% (10/18)   Compressing objects:  61% (11/18)   Compressing objects:  66% (12/18)   Compressing objects:  72% (13/18)   Compressing objects:  77% (14/18)   Compressing objects:  83% (15/18)   Compressing objects:  88% (16/18)   Compressing objects:  94% (17/18)   Compressing objects: 100% (18/18)   Compressing objects: 100% (18/18), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 9.95 KiB | 0 bytes/s, done.
+Total 19 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), done.[K
+To git@github.com:nstrayer/network3d.git
+ * [new branch]      master -> master
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ ls
+total 104K
+drwxr-xr-x 3 nick nick 4.0K Apr  5 14:47 [0m[01;34m.[0m
+drwxr-xr-x 5 nick nick 4.0K Apr  5 11:08 [01;34m..[0m
+-rw-r--r-- 1 nick nick  657 Apr  5 14:21 BuildEdges.js
+-rw-r--r-- 1 nick nick 1.1K Apr  5 13:22 BuildNodes.js
+-rw-r--r-- 1 nick nick  779 Apr  5 14:24 GenerateEdgePositions.js
+-rw-r--r-- 1 nick nick  440 Apr  5 14:03 GeneratePointPositions.js
+-rw-r--r-- 1 nick nick  657 Apr  5 11:20 GeneratePointStaticAttrs.js
+drwxr-xr-x 8 nick nick 4.0K Apr  5 14:48 [01;34m.git[0m
+-rw-r--r-- 1 nick nick    9 Apr  5 14:46 .gitignore
+-rw-r--r-- 1 nick nick  618 Apr  5 14:18 main.js
+-rw-r--r-- 1 nick nick 1007 Apr  5 13:22 MakeNodeMaterial.js
+-rw-r--r-- 1 nick nick  13K Apr  5 11:42 PhewasNetworkFull.js
+-rw-r--r-- 1 nick nick  14K Apr  5 14:44 PhewasNetwork.js
+-rw-r--r-- 1 nick nick  602 Apr  5 11:22 SetupCamera.js
+-rw-r--r-- 1 nick nick  432 Apr  5 13:34 SetupControls.js
+-rw-r--r-- 1 nick nick  242 Apr  5 14:30 SetupRaycaster.js
+-rw-r--r-- 1 nick nick  395 Apr  5 11:40 SetupRenderer.js
+-rw-r--r-- 1 nick nick  349 Apr  5 13:27 SetupScene.js
+-rw-r--r-- 1 nick nick  548 Apr  5 13:57 SetupSimulation.js
+-rw-r--r-- 1 nick nick  763 Apr  5 14:28 Tooltip.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ [K]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ mv .gitignore ../../htmlwidgets/[K[K[K[K[K[K[K[K[K[K[K[K../
+build_and_run.R  DESCRIPTION      man/             network3d.Rproj  .Rbuildignore    
+data/            inst/            NAMESPACE        R/               .Rproj.user/     
+]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ mv .gitignore ../../../
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ ls
+total 100K
+drwxr-xr-x 3 nick nick 4.0K Apr  5 14:49 [0m[01;34m.[0m
+drwxr-xr-x 5 nick nick 4.0K Apr  5 11:08 [01;34m..[0m
+-rw-r--r-- 1 nick nick  657 Apr  5 14:21 BuildEdges.js
+-rw-r--r-- 1 nick nick 1.1K Apr  5 13:22 BuildNodes.js
+-rw-r--r-- 1 nick nick  779 Apr  5 14:24 GenerateEdgePositions.js
+-rw-r--r-- 1 nick nick  440 Apr  5 14:03 GeneratePointPositions.js
+-rw-r--r-- 1 nick nick  657 Apr  5 11:20 GeneratePointStaticAttrs.js
+drwxr-xr-x 8 nick nick 4.0K Apr  5 14:48 [01;34m.git[0m
+-rw-r--r-- 1 nick nick  618 Apr  5 14:18 main.js
+-rw-r--r-- 1 nick nick 1007 Apr  5 13:22 MakeNodeMaterial.js
+-rw-r--r-- 1 nick nick  13K Apr  5 11:42 PhewasNetworkFull.js
+-rw-r--r-- 1 nick nick  14K Apr  5 14:44 PhewasNetwork.js
+-rw-r--r-- 1 nick nick  602 Apr  5 11:22 SetupCamera.js
+-rw-r--r-- 1 nick nick  432 Apr  5 13:34 SetupControls.js
+-rw-r--r-- 1 nick nick  242 Apr  5 14:30 SetupRaycaster.js
+-rw-r--r-- 1 nick nick  395 Apr  5 11:40 SetupRenderer.js
+-rw-r--r-- 1 nick nick  349 Apr  5 13:27 SetupScene.js
+-rw-r--r-- 1 nick nick  548 Apr  5 13:57 SetupSimulation.js
+-rw-r--r-- 1 nick nick  763 Apr  5 14:28 Tooltip.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ rm -rf .git/
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ ls
+total 96K
+drwxr-xr-x 2 nick nick 4.0K Apr  5 14:49 [0m[01;34m.[0m
+drwxr-xr-x 5 nick nick 4.0K Apr  5 11:08 [01;34m..[0m
+-rw-r--r-- 1 nick nick  657 Apr  5 14:21 BuildEdges.js
+-rw-r--r-- 1 nick nick 1.1K Apr  5 13:22 BuildNodes.js
+-rw-r--r-- 1 nick nick  779 Apr  5 14:24 GenerateEdgePositions.js
+-rw-r--r-- 1 nick nick  440 Apr  5 14:03 GeneratePointPositions.js
+-rw-r--r-- 1 nick nick  657 Apr  5 11:20 GeneratePointStaticAttrs.js
+-rw-r--r-- 1 nick nick  618 Apr  5 14:18 main.js
+-rw-r--r-- 1 nick nick 1007 Apr  5 13:22 MakeNodeMaterial.js
+-rw-r--r-- 1 nick nick  13K Apr  5 11:42 PhewasNetworkFull.js
+-rw-r--r-- 1 nick nick  14K Apr  5 14:44 PhewasNetwork.js
+-rw-r--r-- 1 nick nick  602 Apr  5 11:22 SetupCamera.js
+-rw-r--r-- 1 nick nick  432 Apr  5 13:34 SetupControls.js
+-rw-r--r-- 1 nick nick  242 Apr  5 14:30 SetupRaycaster.js
+-rw-r--r-- 1 nick nick  395 Apr  5 11:40 SetupRenderer.js
+-rw-r--r-- 1 nick nick  349 Apr  5 13:27 SetupScene.js
+-rw-r--r-- 1 nick nick  548 Apr  5 13:57 SetupSimulation.js
+-rw-r--r-- 1 nick nick  763 Apr  5 14:28 Tooltip.js
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ cd ..
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ cd ..
+]0;/home/nick/fast_bind/network3d/inst]0;nick@compooper: ~/fast_bind/network3d/inst[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst[00m$ cd ..
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ git init
+Initialized empty Git repository in /home/nick/fast_bind/network3d/.git/
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ git remote add origin git@github.com:nstrayer/network3d.git
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "first stuff is in and basic network works[K[K[K[K[Krenders well."

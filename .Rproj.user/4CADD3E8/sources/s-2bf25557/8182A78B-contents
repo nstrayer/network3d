@@ -1,0 +1,6 @@
+module.exports = function resetTooltip(tooltip){
+  tooltip
+    .style('display', 'none')
+    .style('top', -1000)
+    .style('left', -1000);
+};

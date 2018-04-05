@@ -1,0 +1,16 @@
+// construct mesh for the edges between nodes
+module.exports = function buildEdges(nodes, links, constants){
+  const geometry = new THREE.BufferGeometry(),
+        edge_locations = generate_edge_positions(nodes, links),
+        material = new THREE.LineBasicMaterial( {
+          color: constants.colors.edge,
+          opacity: constants.misc.edge_opacity,
+          transparent: true,
+          linewidth: constants.sizes.edge_width,
+        } );
+
+  // send locations vector to the geometry buffer.
+  geometry.addAttribute( 'position', new THREE.BufferAttribute( edge_locations, 3 ) );
+
+  return new THREE.LineSegments( geometry, material);
+};

@@ -1,0 +1,15 @@
+// same but for the nodes/points
+function generatePointPositions(nodes){
+  const num_points = nodes.length,
+        point_locations = new Float32Array(num_points*3);
+
+  let vertex;
+
+  for (let i = 0; i < num_points; i ++ ) {
+    vertex = nodes[i];
+    point_locations[i*3]     = vertex.cx;
+    point_locations[i*3 + 1] = vertex.cy;
+    point_locations[i*3 + 2] = vertex.cz;
+  }
+  return point_locations;
+}
