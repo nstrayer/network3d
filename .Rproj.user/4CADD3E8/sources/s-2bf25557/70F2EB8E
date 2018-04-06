@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523040254683.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "70F2EB8E",
+    "lastKnownWriteTime" : 1523043127,
+    "last_content_update" : 1523043127713,
+    "path" : "~/fast_bind/network3d/inst/htmlwidgets/src/MakeLinkNodeStrengths.js",
+    "project_path" : "inst/htmlwidgets/src/MakeLinkNodeStrengths.js",
+    "properties" : {
+        "cursorPosition" : "1,4",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "js"
+}

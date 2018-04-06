@@ -16,15 +16,17 @@ const setupCamera = require('./SetupCamera.js');
 const setupRaycaster = require('./SetupRaycaster.js');
 const setupControls = require('./SetupControls.js');
 
+const calcConnectionCounts = require('./CalcConnectionCounts.js');
+const makeLinkNodeStrengths = require('./MakeLinkNodeStrengths.js');
+
 class phewasNetwork{
   constructor(el, width, height){
     this.width = width;
     this.height = height;
 
-
     this.manybody_strength = -1;
-    this.link_strength = 1;
-    this.static_length_strength = true;
+    this.link_strength = 0;
+    this.static_length_strength = false;
 
     // setup vector for holding mouse position for raycaster
     this.mouse = new THREE.Vector2(100, 100);
@@ -124,21 +126,21 @@ class phewasNetwork{
   // update simulation constants
   updateSim(){
 
-    const manybody_strength = this.manybody_strength;
-    const link_strength = this.link_strength;
-    const static_links = this.static_length_strength;
+
+    const {
+      link_strength_func,
+      node_strength_func,
+    } = makeLinkNodeStrengths(
+      this.manybody_strength,
+      this.link_strength,
+      this.static_length_strength,
+      this.connection_counts
+    );
 
     this.simulation
-      .force("link",
-        static_links ?
-          d3.forceLink(this.links).id(d => d.id).strength(link_strength):
-          d3.forceLink(this.links).id(d => d.id)
-      )
-      .force("charge",
-        d3.forceManyBody()
-          .strength(manybody_strength)
-      )
-      .alpha(1);
+      .force("link", link_strength_func(this.links))
+      .force("charge", node_strength_func)
+      .alpha(1); // this reset the simulation heat to it goes again.
 
     this.iteration = 0;
   }
@@ -178,6 +180,8 @@ class phewasNetwork{
     // extract node and link data
     this.nodes = x.data.vertices;
     this.links = x.data.edges;
+    // build connection count object
+    this.connection_counts = calcConnectionCounts(this.links);
 
     // Assign some helpful constants for other methods to use.
     this.interactive = x.interactive;
@@ -185,8 +189,11 @@ class phewasNetwork{
     this.selection_size_mult = x.selection_size_mult;
     this.show_simulation_progress = x.show_simulation_progress;
     this.max_iterations = x.max_iterations;
+
     this.manybody_strength = x.manybody_strength;
     this.link_strength = x.link_strength;
+    this.static_length_strength = x.static_length_strength;
+
 
     // Setup tooltip offset
     this.tooltip.setOffset(x.tooltip_offset);
@@ -199,8 +206,10 @@ class phewasNetwork{
     // initialize our simulation object and perform one iteration to get link data in proper form
     this.simulation = setupSimulation(
       this.nodes, this.links,
+      this.connection_counts,
       this.manybody_strength,
-      this.link_strength
+      this.link_strength,
+      this.static_length_strength
     );
 
     // Building the visualization

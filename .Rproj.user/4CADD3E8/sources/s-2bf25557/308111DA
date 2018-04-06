@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "833843138",
+    "hash" : "7095658",
     "id" : "308111DA",
-    "lastKnownWriteTime" : 1523037736,
-    "last_content_update" : 1523037736752,
+    "lastKnownWriteTime" : 1523044624,
+    "last_content_update" : 1523044624713,
     "path" : "~/fast_bind/network3d/R/network3d.R",
     "project_path" : "R/network3d.R",
     "properties" : {
-        "cursorPosition" : "64,0",
-        "scrollLine" : "30"
+        "cursorPosition" : "66,35",
+        "scrollLine" : "47"
     },
     "relative_order" : 2,
     "source_on_save" : false,

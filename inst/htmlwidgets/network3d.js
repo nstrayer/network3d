@@ -2544,7 +2544,7 @@ module.exports = function buildEdges({nodes, links, color, opacity, width}){
   return new THREE.LineSegments( geometry, material);
 };
 
-},{"./GenerateEdgePositions.js":4}],3:[function(require,module,exports){
+},{"./GenerateEdgePositions.js":5}],3:[function(require,module,exports){
 const generatePointPositions = require('./GeneratePointPositions.js');
 const makeNodeMaterial = require('./MakeNodeMaterial.js');
 
@@ -2568,7 +2568,20 @@ module.exports = function buildNodes({nodes, nodeColors, nodeSizes, blackOutline
   return new THREE.Points(geometry, material);
 };
 
-},{"./GeneratePointPositions.js":5,"./MakeNodeMaterial.js":7}],4:[function(require,module,exports){
+},{"./GeneratePointPositions.js":6,"./MakeNodeMaterial.js":9}],4:[function(require,module,exports){
+module.exports = function(links){
+  const connection_counts = {},
+        num_links = links.length;
+
+  for(let i = 0; i < num_links; i++){
+    connection_counts[links[i].source] = (connection_counts[links[i].source] || 0) + 1;
+    connection_counts[links[i].target] = (connection_counts[links[i].source] || 0) + 1;
+  }
+
+  return connection_counts;
+}
+
+},{}],5:[function(require,module,exports){
 // returns typed array for the buffer geometry position
 module.exports = function generateEdgePositions(nodes, links){
   const num_edges = links.length;
@@ -2596,7 +2609,7 @@ module.exports = function generateEdgePositions(nodes, links){
   return edge_locations;
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 // same but for the nodes/points
 module.exports = function generatePointPositions(nodes){
   const num_points = nodes.length,
@@ -2614,7 +2627,7 @@ module.exports = function generatePointPositions(nodes){
   return point_locations;
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports = function generatePointStaticAttrs(nodes, default_size){
   const num_points = nodes.length,
         color = new THREE.Color(),
@@ -2636,7 +2649,25 @@ module.exports = function generatePointStaticAttrs(nodes, default_size){
   return {colors: point_colors, sizes: point_sizes};
 };
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
+module.exports = function(manybody_strength, link_strength, constant_links, connection_counts){
+  //const maxCount = Math.max(...Object.values(connection_counts));
+
+  const link_strength_func = links => d3.forceLink(links)
+    .id(d => d.id)
+    .strength(
+      link => constant_links ?
+        link_strength:
+        (1 / Math.min(connection_counts[link.source.id],connection_counts[link.target.id]))
+    );
+
+  const node_strength_func = d3.forceManyBody()
+    .strength(manybody_strength);
+
+  return {link_strength_func, node_strength_func};
+};
+
+},{}],9:[function(require,module,exports){
 // build custom shader material for nodes to avoid using sprites.
 module.exports = function makeNodeMaterial(blackOutline){
   // --------------------------------------------------------------
@@ -2669,7 +2700,7 @@ gl_FragColor = vec4(pct > 0.4 ? vec3(${outline_fill}): vColor, pct < 0.5 ? 1.0: 
   } );
 };
 
-},{}],8:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 const setupRenderer = require('./SetupRenderer.js');
 
 const Tooltip = require('./Tooltip.js');
@@ -2688,15 +2719,17 @@ const setupCamera = require('./SetupCamera.js');
 const setupRaycaster = require('./SetupRaycaster.js');
 const setupControls = require('./SetupControls.js');
 
+const calcConnectionCounts = require('./CalcConnectionCounts.js');
+const makeLinkNodeStrengths = require('./MakeLinkNodeStrengths.js');
+
 class phewasNetwork{
   constructor(el, width, height){
     this.width = width;
     this.height = height;
 
-
     this.manybody_strength = -1;
-    this.link_strength = 1;
-    this.static_length_strength = true;
+    this.link_strength = 0;
+    this.static_length_strength = false;
 
     // setup vector for holding mouse position for raycaster
     this.mouse = new THREE.Vector2(100, 100);
@@ -2794,23 +2827,23 @@ class phewasNetwork{
   }
 
   // update simulation constants
-  updateSim(manybody, link){
+  updateSim(){
 
-    const manybody_strength = this.manybody_strength;
-    const link_strength = this.link_strength;
-    const static_links = this.static_length_strength;
+
+    const {
+      link_strength_func,
+      node_strength_func,
+    } = makeLinkNodeStrengths(
+      this.manybody_strength,
+      this.link_strength,
+      this.static_length_strength,
+      this.connection_counts
+    );
 
     this.simulation
-      .force("link",
-        static_links ?
-          d3.forceLink(this.links).id(d => d.id).strength(link_strength):
-          d3.forceLink(this.links).id(d => d.id)
-      )
-      .force("charge",
-        d3.forceManyBody()
-          .strength(manybody_strength)
-      )
-      .alpha(1);
+      .force("link", link_strength_func(this.links))
+      .force("charge", node_strength_func)
+      .alpha(1); // this reset the simulation heat to it goes again.
 
     this.iteration = 0;
   }
@@ -2850,6 +2883,8 @@ class phewasNetwork{
     // extract node and link data
     this.nodes = x.data.vertices;
     this.links = x.data.edges;
+    // build connection count object
+    this.connection_counts = calcConnectionCounts(this.links);
 
     // Assign some helpful constants for other methods to use.
     this.interactive = x.interactive;
@@ -2857,8 +2892,11 @@ class phewasNetwork{
     this.selection_size_mult = x.selection_size_mult;
     this.show_simulation_progress = x.show_simulation_progress;
     this.max_iterations = x.max_iterations;
+
     this.manybody_strength = x.manybody_strength;
     this.link_strength = x.link_strength;
+    this.static_length_strength = x.static_length_strength;
+
 
     // Setup tooltip offset
     this.tooltip.setOffset(x.tooltip_offset);
@@ -2871,8 +2909,10 @@ class phewasNetwork{
     // initialize our simulation object and perform one iteration to get link data in proper form
     this.simulation = setupSimulation(
       this.nodes, this.links,
+      this.connection_counts,
       this.manybody_strength,
-      this.link_strength
+      this.link_strength,
+      this.static_length_strength
     );
 
     // Building the visualization
@@ -3017,7 +3057,7 @@ class phewasNetwork{
 
 module.exports = phewasNetwork;
 
-},{"./BuildEdges.js":2,"./BuildNodes.js":3,"./GenerateEdgePositions.js":4,"./GeneratePointPositions.js":5,"./GeneratePointStaticAttrs.js":6,"./ProgressMessage.js":9,"./SetupCamera.js":10,"./SetupControls.js":11,"./SetupRaycaster.js":12,"./SetupRenderer.js":13,"./SetupScene.js":14,"./SetupSimulation.js":15,"./Tooltip.js":16}],9:[function(require,module,exports){
+},{"./BuildEdges.js":2,"./BuildNodes.js":3,"./CalcConnectionCounts.js":4,"./GenerateEdgePositions.js":5,"./GeneratePointPositions.js":6,"./GeneratePointStaticAttrs.js":7,"./MakeLinkNodeStrengths.js":8,"./ProgressMessage.js":11,"./SetupCamera.js":12,"./SetupControls.js":13,"./SetupRaycaster.js":14,"./SetupRenderer.js":15,"./SetupScene.js":16,"./SetupSimulation.js":17,"./Tooltip.js":18}],11:[function(require,module,exports){
 class ProgressMessage {
   constructor(el){
     this.message = d3.select(el)
@@ -3053,7 +3093,7 @@ class ProgressMessage {
 
 module.exports = ProgressMessage;
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 const default_settings = {
   setup: {                   // Initializations
       fov: 65,                  // Field of view
@@ -3091,7 +3131,7 @@ module.exports = function setupCamera(user_settings, width, height){
   return camera;
 };
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 const default_settings = {
   enableDamping:true,       // For that slippery Feeling
   dampingFactor:0.12,       // Needs to call update on render loop
@@ -3123,7 +3163,7 @@ module.exports = function setupControls(camera, renderer, camera_settings){
   return controls;
 };
 
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 // raycaster with given resolution
 module.exports = function setupRaycaster(raycast_res){
   console.log('res', raycast_res);
@@ -3132,7 +3172,7 @@ module.exports = function setupRaycaster(raycast_res){
   return raycaster;
 };
 
-},{}],13:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
  // builds out renderer object and appends it to the correct place.
 module.exports = function setupRenderer({el, width, height}){
   const renderer = new THREE.WebGLRenderer({antialias: true});
@@ -3142,7 +3182,7 @@ module.exports = function setupRenderer({el, width, height}){
   return renderer;
 };
 
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 // sets up three scene with the nodes and edges
 module.exports = function setupScene(nodes, edges, backgroundColor){
   const scene = new THREE.Scene();
@@ -3156,28 +3196,26 @@ module.exports = function setupScene(nodes, edges, backgroundColor){
   return scene;
 };
 
-},{}],15:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
+const makeLinkNodeStrengths = require('./MakeLinkNodeStrengths.js');
+
 // setup the 3d simulation code
-module.exports = function setupSimulation(nodes, links, manybody_strength, link_strength){
+module.exports = function setupSimulation(nodes, links, connection_counts, manybody_strength, link_strength, constant_links){
+
+   const {link_strength_func, node_strength_func} = makeLinkNodeStrengths(manybody_strength, link_strength, constant_links, connection_counts);
+
    const sim = d3.forceSimulation()
     .numDimensions(3)
     .nodes(nodes)
-    .force("link",
-      link_strength === null ?
-        d3.forceLink(links).id(d => d.id):
-        d3.forceLink(links).id(d => d.id).strength(link_strength)
-    )
-    .force("charge",
-      d3.forceManyBody()
-        .strength(manybody_strength)
-    );
+    .force("link", link_strength_func(links))
+    .force("charge", node_strength_func);
 
   sim.tick(); // kick off a single iteration to get data into correct form
 
   return sim;
 };
 
-},{}],16:[function(require,module,exports){
+},{"./MakeLinkNodeStrengths.js":8}],18:[function(require,module,exports){
 class tooltip {
   constructor(el){
     this.offset = 15;
@@ -3216,7 +3254,7 @@ class tooltip {
 
 module.exports = tooltip;
 
-},{}],17:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 const PhewasNetwork = require('./PhewasNetwork.js');
 const dat = require('dat.gui');
 
@@ -3234,50 +3272,25 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-        const gui = new dat.GUI();
-        const node_strength = gui.add(plot, 'manybody_strength', -10,10);
-        const link_strength = gui.add(plot, 'link_strength');
-        const link_static = gui.add(plot, 'static_length_strength');
-        const num_iterations = gui.add(plot, 'max_iterations', 0, 1000).step(10);
+        if(x.force_explorer){
+          const gui = new dat.GUI();
+          const node_strength  = gui.add(plot, 'manybody_strength', -10,10);
+          const link_static    = gui.add(plot, 'static_length_strength');
+          const link_strength  = gui.add(plot, 'link_strength', 0, 5);
+          const num_iterations = gui.add(plot, 'max_iterations', 0, 1000).step(10);
 
-        const updateSim = () => plot.updateSim();
+          const updateSim = () => plot.updateSim();
 
-        node_strength.onFinishChange(updateSim);
-        link_strength.onFinishChange(updateSim);
-        link_static.onFinishChange(updateSim);
-        num_iterations.onFinishChange(updateSim);
+          node_strength.onFinishChange(updateSim);
+          link_strength.onFinishChange(updateSim);
+          link_static.onFinishChange(updateSim);
+          num_iterations.onFinishChange(updateSim);
+        }
 
         x.data.edges = HTMLWidgets.dataframeToD3(x.data.edges);
         x.data.vertices = HTMLWidgets.dataframeToD3(x.data.vertices);
 
-        //const data = {
-        //  edges: HTMLWidgets.dataframeToD3(x.data.edges),
-        //  vertices: HTMLWidgets.dataframeToD3(x.data.vertices),
-        //};
-
-        //const {settings, user_camera_settings, user_control_settings} = x;
-        //
-        //const {
-        //  data,
-        //  user_camera_settings,
-        //  user_control_settings,
-        //  node_outline_black,
-        //  background_color,
-        //  node_size,
-        //  raycast_res,
-        //  edge_color,
-        //  edge_opacity,
-        //  interactive,
-        //  selection_size_mult,
-        //  select_all,
-        //  show_simulation_progress,
-        //  max_iterations,
-        //  force_strength } = x
-
-        //plot.addData({data, settings, user_camera_settings, user_control_settings});
         plot.addData(x);
-        console.log('rendering!');
-
       },
 
       resize: function(width, height) {
@@ -3288,4 +3301,4 @@ HTMLWidgets.widget({
   }
 });
 
-},{"./PhewasNetwork.js":8,"dat.gui":1}]},{},[17]);
+},{"./PhewasNetwork.js":10,"dat.gui":1}]},{},[19]);

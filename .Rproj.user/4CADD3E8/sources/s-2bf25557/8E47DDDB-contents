@@ -28,6 +28,7 @@ data_sized_verts <- makeNetworkData(2000, TRUE)
 
 devtools::install()
 network3d::network3d(data, max_iterations = 75)
+# network3d::network3d(data, max_iterations = 75, manybody_strength = 1, force_explorer = FALSE)
 
 # network3d::network3d(data_sized_verts, max_iterations = 75)
 

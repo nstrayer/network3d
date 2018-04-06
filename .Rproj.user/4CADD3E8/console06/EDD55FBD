@@ -1,915 +1,11 @@
-
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/CHANGELOG.md
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/LICENSE
- create mode 100755 inst/htmlwidgets/node_modules/module-deps/bin/cmd.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/bin/usage.txt
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/example/deps.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/example/files/bar.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/example/files/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/example/files/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/example/files/xyz.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/index.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/bundle.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cache.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cache_expose.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cache_partial.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cache_partial_expose.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cache_persistent.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cache_persistent/error_transform.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/circular_entry.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/circular_entry/app/index.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/circular_entry/app/step1.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cycle.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cycle/bar.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cycle/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/cycle/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/deps.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/dotdot.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/dotdot/abc/index.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/dotdot/index.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/expose.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/expose/bar.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/expose/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/expose/lib/abc.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/expose/lib/xyz.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/expose/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/file_cache.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/bar.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/extra.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/filterable.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/pkg_filter/one.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/pkg_filter/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/pkg_filter/test.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/pkg_filter/two.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/quotes/bar.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/quotes/baz.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/quotes/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/quotes/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/syntax_error.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_2dep_module/f.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_2dep_module/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_global/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_global/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_module/f.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_module/index.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_module/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_module/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_module/xxx.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_no_entry/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_rel/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_rel/subdir/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_rel/xxx.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_sh/f.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_sh/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_sh/tr_a.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_sh/tr_b.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_whole_package/f.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/tr_whole_package/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/transformdeps.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/unicode/bar.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/unicode/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/unicode/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/files/xyz.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/filter.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/ignore_missing.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/ignore_missing/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/ignore_missing/other.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/ignore_missing_cache.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/invalid_pkg.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/invalid_pkg/file.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/invalid_pkg/index.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/invalid_pkg/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/noparse.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/noparse_row.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/pkg.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/pkg/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/pkg/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/pkg_filter.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/quotes.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/row_expose.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/row_expose_name_is_file_transform.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/row_expose_transform.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/source.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/syntax.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_2dep_module.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_deps.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_err.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_flags.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_flags/empty.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_fn.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_global.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_module.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_no_entry.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_opts.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_opts/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_opts/package.json
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_rel.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_sh.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_whole_package.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_write.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/tr_write/main.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/undef_file.js
- create mode 100644 inst/htmlwidgets/node_modules/module-deps/test/unicode.js
- create mode 100644 inst/htmlwidgets/node_modules/normalize-path/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/normalize-path/README.md
- create mode 100644 inst/htmlwidgets/node_modules/normalize-path/index.js
- create mode 100644 inst/htmlwidgets/node_modules/normalize-path/package.json
- create mode 100644 inst/htmlwidgets/node_modules/object.omit/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/object.omit/README.md
- create mode 100644 inst/htmlwidgets/node_modules/object.omit/index.js
- create mode 100644 inst/htmlwidgets/node_modules/object.omit/package.json
- create mode 100644 inst/htmlwidgets/node_modules/once/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/once/README.md
- create mode 100644 inst/htmlwidgets/node_modules/once/once.js
- create mode 100644 inst/htmlwidgets/node_modules/once/package.json
- create mode 100644 inst/htmlwidgets/node_modules/os-browserify/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/os-browserify/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/os-browserify/README.md
- create mode 100644 inst/htmlwidgets/node_modules/os-browserify/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/os-browserify/main.js
- create mode 100644 inst/htmlwidgets/node_modules/os-browserify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/LICENSE
- create mode 100755 inst/htmlwidgets/node_modules/outpipe/bin/echo.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/example/input/x.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/example/input/y.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/example/input/z.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/example/watch.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/index.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/package.json
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/test/cmd.js
- create mode 100644 inst/htmlwidgets/node_modules/outpipe/test/outfile.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/CHANGELOG.md
- create mode 100644 inst/htmlwidgets/node_modules/pako/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/pako/README.md
- create mode 100644 inst/htmlwidgets/node_modules/pako/dist/pako.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/dist/pako.min.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/dist/pako_deflate.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/dist/pako_deflate.min.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/dist/pako_inflate.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/dist/pako_inflate.min.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/index.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/deflate.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/inflate.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/utils/common.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/utils/strings.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/README
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/adler32.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/constants.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/crc32.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/deflate.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/gzheader.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/inffast.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/inflate.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/inftrees.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/messages.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/trees.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/lib/zlib/zstream.js
- create mode 100644 inst/htmlwidgets/node_modules/pako/package.json
- create mode 100644 inst/htmlwidgets/node_modules/parents/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/parents/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/parents/example/dirname.js
- create mode 100644 inst/htmlwidgets/node_modules/parents/example/win32.js
- create mode 100644 inst/htmlwidgets/node_modules/parents/index.js
- create mode 100644 inst/htmlwidgets/node_modules/parents/package.json
- create mode 100644 inst/htmlwidgets/node_modules/parents/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/parents/test/dirname.js
- create mode 100644 inst/htmlwidgets/node_modules/parents/test/win32.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/README.md
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/aesid.json
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/asn1.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/certificate.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/fixProc.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/index.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/package.json
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/dsa.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/dsa.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/dsa.2048.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/dsa.2048.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/ec.pass.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/ec.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/ec.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/node.cert
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.dsa.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.dsa.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.rsa.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.rsa.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.rsa.2028.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass.rsa.2028.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass2.dsa.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/pass2.dsa.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/rsa.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/rsa.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/rsa.2028.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/rsa.2028.pub
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/vector.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/vector.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-asn1/test/vector2.priv
- create mode 100644 inst/htmlwidgets/node_modules/parse-glob/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/parse-glob/README.md
- create mode 100644 inst/htmlwidgets/node_modules/parse-glob/index.js
- create mode 100644 inst/htmlwidgets/node_modules/parse-glob/package.json
- create mode 100644 inst/htmlwidgets/node_modules/path-browserify/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/path-browserify/index.js
- create mode 100644 inst/htmlwidgets/node_modules/path-browserify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/path-browserify/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/path-is-absolute/index.js
- create mode 100644 inst/htmlwidgets/node_modules/path-is-absolute/license
- create mode 100644 inst/htmlwidgets/node_modules/path-is-absolute/package.json
- create mode 100644 inst/htmlwidgets/node_modules/path-is-absolute/readme.md
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/README.md
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/index.js
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/index.min.js
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/package.json
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/test.js
- create mode 100644 inst/htmlwidgets/node_modules/path-parse/test.min.js
- create mode 100644 inst/htmlwidgets/node_modules/path-platform/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/path-platform/README.md
- create mode 100644 inst/htmlwidgets/node_modules/path-platform/package.json
- create mode 100644 inst/htmlwidgets/node_modules/path-platform/path.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/README.md
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/index.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/lib/async.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/lib/default-encoding.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/lib/precondition.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/lib/sync-browser.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/lib/sync.js
- create mode 100644 inst/htmlwidgets/node_modules/pbkdf2/package.json
- create mode 100644 inst/htmlwidgets/node_modules/preserve/.gitattributes
- create mode 100644 inst/htmlwidgets/node_modules/preserve/.jshintrc
- create mode 100644 inst/htmlwidgets/node_modules/preserve/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/preserve/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/preserve/.verb.md
- create mode 100644 inst/htmlwidgets/node_modules/preserve/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/preserve/README.md
- create mode 100644 inst/htmlwidgets/node_modules/preserve/index.js
- create mode 100644 inst/htmlwidgets/node_modules/preserve/package.json
- create mode 100644 inst/htmlwidgets/node_modules/preserve/test.js
- create mode 100644 inst/htmlwidgets/node_modules/process-nextick-args/index.js
- create mode 100644 inst/htmlwidgets/node_modules/process-nextick-args/license.md
- create mode 100644 inst/htmlwidgets/node_modules/process-nextick-args/package.json
- create mode 100644 inst/htmlwidgets/node_modules/process-nextick-args/readme.md
- create mode 100644 inst/htmlwidgets/node_modules/process/.eslintrc
- create mode 100644 inst/htmlwidgets/node_modules/process/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/process/README.md
- create mode 100644 inst/htmlwidgets/node_modules/process/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/process/index.js
- create mode 100644 inst/htmlwidgets/node_modules/process/package.json
- create mode 100644 inst/htmlwidgets/node_modules/process/test.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/index.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/mgf.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/package.json
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/privateDecrypt.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/publicEncrypt.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/readme.md
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/ec.pass.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/ec.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/ec.pub
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/nodeTests.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/pass.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/pass.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/rsa.1024.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/rsa.1024.pub
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/rsa.2028.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/rsa.2028.pub
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/rsa.pass.priv
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/rsa.pass.pub
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/test_cert.pem
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/test_key.pem
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/test_rsa_privkey.pem
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/test_rsa_privkey_encrypted.pem
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/test/test_rsa_pubkey.pem
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/withPublic.js
- create mode 100644 inst/htmlwidgets/node_modules/public-encrypt/xor.js
- create mode 100644 inst/htmlwidgets/node_modules/punycode/LICENSE-MIT.txt
- create mode 100644 inst/htmlwidgets/node_modules/punycode/README.md
- create mode 100644 inst/htmlwidgets/node_modules/punycode/package.json
- create mode 100644 inst/htmlwidgets/node_modules/punycode/punycode.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/History.md
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/License.md
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/Readme.md
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/decode.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/encode.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/package.json
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/test/common-index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring-es3/test/tap-index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring/.History.md.un~
- create mode 100644 inst/htmlwidgets/node_modules/querystring/.Readme.md.un~
- create mode 100644 inst/htmlwidgets/node_modules/querystring/.package.json.un~
- create mode 100644 inst/htmlwidgets/node_modules/querystring/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/querystring/History.md
- create mode 100644 inst/htmlwidgets/node_modules/querystring/License.md
- create mode 100644 inst/htmlwidgets/node_modules/querystring/Readme.md
- create mode 100644 inst/htmlwidgets/node_modules/querystring/decode.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring/encode.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring/index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring/package.json
- create mode 100644 inst/htmlwidgets/node_modules/querystring/test/.index.js.un~
- create mode 100644 inst/htmlwidgets/node_modules/querystring/test/common-index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/querystring/test/tap-index.js
- create mode 100755 inst/htmlwidgets/node_modules/randomatic/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/README.md
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/index.js
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/README.md
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/index.js
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/node_modules/kind-of/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/node_modules/kind-of/README.md
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/node_modules/kind-of/index.js
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/node_modules/kind-of/package.json
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/is-number/package.json
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/kind-of/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/kind-of/README.md
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/kind-of/index.js
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/node_modules/kind-of/package.json
- create mode 100644 inst/htmlwidgets/node_modules/randomatic/package.json
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/.zuul.yml
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/README.md
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/index.js
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/package.json
- create mode 100644 inst/htmlwidgets/node_modules/randombytes/test.js
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/.zuul.yml
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/README.md
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/index.js
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/package.json
- create mode 100644 inst/htmlwidgets/node_modules/randomfill/test.js
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/example/main.js
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/example/wrap.js
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/index.js
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/package.json
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/test/error.js
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/test/ro.js
- create mode 100644 inst/htmlwidgets/node_modules/read-only-stream/test/streams1.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/CONTRIBUTING.md
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/GOVERNANCE.md
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/README.md
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/duplex-browser.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/duplex.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/_stream_duplex.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/_stream_passthrough.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/_stream_readable.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/_stream_transform.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/_stream_writable.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/internal/streams/BufferList.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/internal/streams/destroy.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/internal/streams/stream-browser.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/lib/internal/streams/stream.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/node_modules/string_decoder/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/node_modules/string_decoder/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/node_modules/string_decoder/README.md
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/node_modules/string_decoder/lib/string_decoder.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/node_modules/string_decoder/package.json
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/package.json
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/passthrough.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/readable-browser.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/readable.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/transform.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/writable-browser.js
- create mode 100644 inst/htmlwidgets/node_modules/readable-stream/writable.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/README.md
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/examples/Readme.md
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/examples/callback-api.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/examples/grep.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/examples/package.json
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/examples/stream-api-pipe.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/examples/stream-api.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/package.json
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/readdirp.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/stream-api.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_dir1/root_dir1_file1.ext1
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_dir1/root_dir1_file2.ext2
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_dir1/root_dir1_file3.ext3
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_dir1/root_dir1_subdir1/root1_dir1_subdir1_file1.ext1
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_dir2/root_dir2_file1.ext1
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_dir2/root_dir2_file2.ext2
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_file1.ext1
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_file2.ext2
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/bed/root_file3.ext3
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/readdirp-stream.js
- create mode 100644 inst/htmlwidgets/node_modules/readdirp/test/readdirp.js
- create mode 100644 inst/htmlwidgets/node_modules/regex-cache/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/regex-cache/README.md
- create mode 100644 inst/htmlwidgets/node_modules/regex-cache/index.js
- create mode 100644 inst/htmlwidgets/node_modules/regex-cache/package.json
- create mode 100644 inst/htmlwidgets/node_modules/remove-trailing-separator/history.md
- create mode 100644 inst/htmlwidgets/node_modules/remove-trailing-separator/index.js
- create mode 100644 inst/htmlwidgets/node_modules/remove-trailing-separator/license
- create mode 100644 inst/htmlwidgets/node_modules/remove-trailing-separator/package.json
- create mode 100644 inst/htmlwidgets/node_modules/remove-trailing-separator/readme.md
- create mode 100644 inst/htmlwidgets/node_modules/repeat-element/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/repeat-element/README.md
- create mode 100644 inst/htmlwidgets/node_modules/repeat-element/index.js
- create mode 100644 inst/htmlwidgets/node_modules/repeat-element/package.json
- create mode 100644 inst/htmlwidgets/node_modules/repeat-string/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/repeat-string/README.md
- create mode 100644 inst/htmlwidgets/node_modules/repeat-string/index.js
- create mode 100644 inst/htmlwidgets/node_modules/repeat-string/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/.editorconfig
- create mode 100644 inst/htmlwidgets/node_modules/resolve/.eslintignore
- create mode 100644 inst/htmlwidgets/node_modules/resolve/.eslintrc
- create mode 100644 inst/htmlwidgets/node_modules/resolve/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/resolve/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/resolve/appveyor.yml
- create mode 100644 inst/htmlwidgets/node_modules/resolve/example/async.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/example/sync.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/lib/async.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/lib/caller.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/lib/core.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/lib/core.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/lib/node-modules-paths.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/lib/sync.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/core.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/dotdot.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/dotdot/abc/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/dotdot/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/faulty_basedir.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/filter.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/filter_sync.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/mock.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/mock_sync.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/module_dir.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/module_dir/xmodules/aaa/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/module_dir/ymodules/aaa/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/module_dir/zmodules/bbb/main.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/module_dir/zmodules/bbb/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/node-modules-paths.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/node_path.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/node_path/x/aaa/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/node_path/x/ccc/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/node_path/y/bbb/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/node_path/y/ccc/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/nonstring.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/pathfilter.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/pathfilter/deep_ref/main.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/precedence.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/precedence/aaa.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/precedence/aaa/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/precedence/aaa/main.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/precedence/bbb.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/precedence/bbb/main.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/baz/doom.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/baz/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/baz/quux.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/cup.coffee
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/dot_main/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/dot_main/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/dot_slash_main/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/dot_slash_main/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/incorrect_main/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/incorrect_main/package.json
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/mug.coffee
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/mug.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/other_path/lib/other-lib.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/other_path/root.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/quux/foo/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/same_names/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/same_names/foo/index.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/symlinked/_/node_modules/foo.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/symlinked/_/symlink_target/.gitkeep
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver/without_basedir/main.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/resolver_sync.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/subdirs.js
- create mode 100644 inst/htmlwidgets/node_modules/resolve/test/symlinks.js
- create mode 100644 inst/htmlwidgets/node_modules/ripemd160/CHANGELOG.md
- create mode 100644 inst/htmlwidgets/node_modules/ripemd160/LICENSE.md
- create mode 100644 inst/htmlwidgets/node_modules/ripemd160/README.md
- create mode 100644 inst/htmlwidgets/node_modules/ripemd160/index.js
- create mode 100644 inst/htmlwidgets/node_modules/ripemd160/package.json
- create mode 100644 inst/htmlwidgets/node_modules/safe-buffer/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/safe-buffer/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/safe-buffer/README.md
- create mode 100644 inst/htmlwidgets/node_modules/safe-buffer/index.js
- create mode 100644 inst/htmlwidgets/node_modules/safe-buffer/package.json
- create mode 100644 inst/htmlwidgets/node_modules/safe-buffer/test.js
- create mode 100644 inst/htmlwidgets/node_modules/set-immediate-shim/index.js
- create mode 100644 inst/htmlwidgets/node_modules/set-immediate-shim/package.json
- create mode 100644 inst/htmlwidgets/node_modules/set-immediate-shim/readme.md
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/README.md
- create mode 100755 inst/htmlwidgets/node_modules/sha.js/bin.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/hash.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/index.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/package.json
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/sha.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/sha1.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/sha224.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/sha256.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/sha384.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/sha512.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/test/hash.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/test/test.js
- create mode 100644 inst/htmlwidgets/node_modules/sha.js/test/vectors.js
- create mode 100644 inst/htmlwidgets/node_modules/shasum/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/shasum/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/shasum/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/shasum/README.md
- create mode 100644 inst/htmlwidgets/node_modules/shasum/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/shasum/index.js
- create mode 100644 inst/htmlwidgets/node_modules/shasum/package.json
- create mode 100644 inst/htmlwidgets/node_modules/shasum/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/example/env.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/example/op.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/example/parse.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/example/quote.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/index.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/package.json
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/comment.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/env.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/env_fn.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/op.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/parse.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/quote.js
- create mode 100644 inst/htmlwidgets/node_modules/shell-quote/test/set.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/CHANGELOG.md
- create mode 100644 inst/htmlwidgets/node_modules/source-map/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/source-map/README.md
- create mode 100644 inst/htmlwidgets/node_modules/source-map/dist/source-map.debug.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/dist/source-map.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/dist/source-map.min.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/dist/source-map.min.js.map
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/array-set.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/base64-vlq.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/base64.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/binary-search.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/mapping-list.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/quick-sort.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/source-map-consumer.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/source-map-generator.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/source-node.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/lib/util.js
- create mode 100644 inst/htmlwidgets/node_modules/source-map/package.json
- create mode 100644 inst/htmlwidgets/node_modules/source-map/source-map.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/index.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/stream-browserify/test/buf.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/README.md
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/index.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/package.json
- create mode 100644 inst/htmlwidgets/node_modules/stream-combiner2/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/.airtap.yml
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/README.md
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/ie8-polyfill.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/index.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/lib/capability.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/lib/request.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/lib/response.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/package.json
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/abort.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/auth.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/binary-streaming.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/binary.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/body-empty.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/cookie.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/disable-fetch.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/error.js.disabled
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/headers.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/lib/webworker-worker.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/package.json
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/post-binary.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/post-text.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/text-streaming.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/text.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/timeout.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/browser/webworker.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/node/http-browserify.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/server/index.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/server/static/basic.txt
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/server/static/browserify.png
- create mode 100644 inst/htmlwidgets/node_modules/stream-http/test/server/static/test-polyfill.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/example/header.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/index.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/package.json
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/combiner.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/combiner_stream.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/empty.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/empty_no_data.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/get.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/multipush.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/multiunshift.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/nested.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/nested_middle.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/pop.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/push.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/shift.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/splice.js
- create mode 100644 inst/htmlwidgets/node_modules/stream-splicer/test/unshift.js
- create mode 100644 inst/htmlwidgets/node_modules/string_decoder/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/string_decoder/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/string_decoder/README.md
- create mode 100644 inst/htmlwidgets/node_modules/string_decoder/lib/string_decoder.js
- create mode 100644 inst/htmlwidgets/node_modules/string_decoder/package.json
- create mode 100644 inst/htmlwidgets/node_modules/subarg/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/subarg/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/subarg/example/show.js
- create mode 100644 inst/htmlwidgets/node_modules/subarg/index.js
- create mode 100644 inst/htmlwidgets/node_modules/subarg/package.json
- create mode 100644 inst/htmlwidgets/node_modules/subarg/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/subarg/test/arg.js
- create mode 100644 inst/htmlwidgets/node_modules/subarg/test/recursive.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/example/check.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/example/src.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/index.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/package.json
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/check.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/esm.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/html.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/ok.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/run.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/run2.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/shebang.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/check.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/esm.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/ok.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/run.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/run2.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/shebang.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/spread.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/sources/yield.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/spread.js
- create mode 100644 inst/htmlwidgets/node_modules/syntax-error/test/yield.js
- create mode 100644 inst/htmlwidgets/node_modules/through/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/through/LICENSE.APACHE2
- create mode 100644 inst/htmlwidgets/node_modules/through/LICENSE.MIT
- create mode 100644 inst/htmlwidgets/node_modules/through/index.js
- create mode 100644 inst/htmlwidgets/node_modules/through/package.json
- create mode 100644 inst/htmlwidgets/node_modules/through/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/through/test/async.js
- create mode 100644 inst/htmlwidgets/node_modules/through/test/auto-destroy.js
- create mode 100644 inst/htmlwidgets/node_modules/through/test/buffering.js
- create mode 100644 inst/htmlwidgets/node_modules/through/test/end.js
- create mode 100644 inst/htmlwidgets/node_modules/through/test/index.js
- create mode 100644 inst/htmlwidgets/node_modules/through2/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/through2/LICENSE.html
- create mode 100644 inst/htmlwidgets/node_modules/through2/LICENSE.md
- create mode 100644 inst/htmlwidgets/node_modules/through2/README.md
- create mode 100644 inst/htmlwidgets/node_modules/through2/package.json
- create mode 100644 inst/htmlwidgets/node_modules/through2/through2.js
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/CHANGELOG.md
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/LICENSE.md
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/README.md
- create mode 100755 inst/htmlwidgets/node_modules/timers-browserify/example/enroll/build.sh
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/example/enroll/index.html
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/example/enroll/js/browserify.js
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/example/enroll/js/main.js
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/example/enroll/server.js
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/main.js
- create mode 100644 inst/htmlwidgets/node_modules/timers-browserify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/.zuul.yml
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/README.md
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/index.js
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/package.json
- create mode 100644 inst/htmlwidgets/node_modules/to-arraybuffer/test.js
- create mode 100644 inst/htmlwidgets/node_modules/tty-browserify/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/tty-browserify/index.js
- create mode 100644 inst/htmlwidgets/node_modules/tty-browserify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/tty-browserify/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/example/tarray.js
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/index.js
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/package.json
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/test/server/undef_globals.js
- create mode 100644 inst/htmlwidgets/node_modules/typedarray/test/tarray.js
- create mode 100644 inst/htmlwidgets/node_modules/umd/HISTORY.md
- create mode 100644 inst/htmlwidgets/node_modules/umd/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/umd/README.md
- create mode 100755 inst/htmlwidgets/node_modules/umd/bin/cli.js
- create mode 100644 inst/htmlwidgets/node_modules/umd/index.js
- create mode 100644 inst/htmlwidgets/node_modules/umd/package.json
- create mode 100644 inst/htmlwidgets/node_modules/url/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/url/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/url/.zuul.yml
- create mode 100644 inst/htmlwidgets/node_modules/url/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/url/README.md
- create mode 100644 inst/htmlwidgets/node_modules/url/node_modules/punycode/LICENSE-MIT.txt
- create mode 100644 inst/htmlwidgets/node_modules/url/node_modules/punycode/README.md
- create mode 100644 inst/htmlwidgets/node_modules/url/node_modules/punycode/package.json
- create mode 100644 inst/htmlwidgets/node_modules/url/node_modules/punycode/punycode.js
- create mode 100644 inst/htmlwidgets/node_modules/url/package.json
- create mode 100644 inst/htmlwidgets/node_modules/url/test.js
- create mode 100644 inst/htmlwidgets/node_modules/url/url.js
- create mode 100644 inst/htmlwidgets/node_modules/url/util.js
- create mode 100644 inst/htmlwidgets/node_modules/util-deprecate/History.md
- create mode 100644 inst/htmlwidgets/node_modules/util-deprecate/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/util-deprecate/README.md
- create mode 100644 inst/htmlwidgets/node_modules/util-deprecate/browser.js
- create mode 100644 inst/htmlwidgets/node_modules/util-deprecate/node.js
- create mode 100644 inst/htmlwidgets/node_modules/util-deprecate/package.json
- create mode 100644 inst/htmlwidgets/node_modules/util/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/util/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/util/.zuul.yml
- create mode 100644 inst/htmlwidgets/node_modules/util/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/util/README.md
- create mode 100644 inst/htmlwidgets/node_modules/util/node_modules/inherits/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/util/node_modules/inherits/README.md
- create mode 100644 inst/htmlwidgets/node_modules/util/node_modules/inherits/inherits.js
- create mode 100644 inst/htmlwidgets/node_modules/util/node_modules/inherits/inherits_browser.js
- create mode 100644 inst/htmlwidgets/node_modules/util/node_modules/inherits/package.json
- create mode 100644 inst/htmlwidgets/node_modules/util/node_modules/inherits/test.js
- create mode 100644 inst/htmlwidgets/node_modules/util/package.json
- create mode 100644 inst/htmlwidgets/node_modules/util/support/isBuffer.js
- create mode 100644 inst/htmlwidgets/node_modules/util/support/isBufferBrowser.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/browser/inspect.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/browser/is.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/node/debug.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/node/format.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/node/inspect.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/node/log.js
- create mode 100644 inst/htmlwidgets/node_modules/util/test/node/util.js
- create mode 100644 inst/htmlwidgets/node_modules/util/util.js
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/example/run/bundle.js
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/example/run/entry.js
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/example/run/index.html
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/example/run/server.js
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/index.js
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/vm-browserify/test/vm.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/watchify/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/watchify/bin/args.js
- create mode 100755 inst/htmlwidgets/node_modules/watchify/bin/cmd.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/example/files/main.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/example/files/one.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/example/files/two.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/index.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/package.json
- create mode 100644 inst/htmlwidgets/node_modules/watchify/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/api.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/api_brfs.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/api_ignore_watch.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/api_ignore_watch_default.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/api_ignore_watch_multiple.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/api_implicit_cache.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_brfs.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_ignore_watch.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_ignore_watch_default.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_ignore_watch_multiple.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_pipe.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_plugins_pipelining_multiple_errors.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/bin_standalone.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/errors.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/errors_transform.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/expose.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/many.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/many_immediate.js
- create mode 100644 inst/htmlwidgets/node_modules/watchify/test/zzz.js
- create mode 100644 inst/htmlwidgets/node_modules/wrappy/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/wrappy/README.md
- create mode 100644 inst/htmlwidgets/node_modules/wrappy/package.json
- create mode 100644 inst/htmlwidgets/node_modules/wrappy/wrappy.js
- create mode 100644 inst/htmlwidgets/node_modules/xtend/.jshintrc
- create mode 100644 inst/htmlwidgets/node_modules/xtend/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/xtend/LICENCE
- create mode 100644 inst/htmlwidgets/node_modules/xtend/Makefile
- create mode 100644 inst/htmlwidgets/node_modules/xtend/README.md
- create mode 100644 inst/htmlwidgets/node_modules/xtend/immutable.js
- create mode 100644 inst/htmlwidgets/node_modules/xtend/mutable.js
- create mode 100644 inst/htmlwidgets/node_modules/xtend/package.json
- create mode 100644 inst/htmlwidgets/node_modules/xtend/test.js
- create mode 100644 inst/htmlwidgets/oldNetworkJS.js
- create mode 100644 inst/htmlwidgets/package-lock.json
- create mode 100644 inst/htmlwidgets/package.json
- create mode 100644 inst/htmlwidgets/src/BuildEdges.js
- create mode 100644 inst/htmlwidgets/src/BuildNodes.js
- create mode 100644 inst/htmlwidgets/src/GenerateEdgePositions.js
- create mode 100644 inst/htmlwidgets/src/GeneratePointPositions.js
- create mode 100644 inst/htmlwidgets/src/GeneratePointStaticAttrs.js
- create mode 100644 inst/htmlwidgets/src/MakeNodeMaterial.js
- create mode 100644 inst/htmlwidgets/src/PhewasNetwork.js
- create mode 100644 inst/htmlwidgets/src/PhewasNetworkFull.js
- create mode 100644 inst/htmlwidgets/src/SetupCamera.js
- create mode 100644 inst/htmlwidgets/src/SetupControls.js
- create mode 100644 inst/htmlwidgets/src/SetupRaycaster.js
- create mode 100644 inst/htmlwidgets/src/SetupRenderer.js
- create mode 100644 inst/htmlwidgets/src/SetupScene.js
- create mode 100644 inst/htmlwidgets/src/SetupSimulation.js
- create mode 100644 inst/htmlwidgets/src/Tooltip.js
- create mode 100644 inst/htmlwidgets/src/main.js
- create mode 100644 man/hello.Rd
-Counting objects: 3031, done.
-Delta compression using up to 8 threads.
-Compressing objects:   0% (1/2546)   Compressing objects:   1% (26/2546)   Compressing objects:   2% (51/2546)   Compressing objects:   3% (77/2546)   Compressing objects:   4% (102/2546)   Compressing objects:   5% (128/2546)   Compressing objects:   6% (153/2546)   Compressing objects:   7% (179/2546)   Compressing objects:   8% (204/2546)   Compressing objects:   9% (230/2546)   Compressing objects:  10% (255/2546)   Compressing objects:  11% (281/2546)   Compressing objects:  12% (306/2546)   Compressing objects:  13% (331/2546)   Compressing objects:  14% (357/2546)   Compressing objects:  15% (382/2546)   Compressing objects:  16% (408/2546)   Compressing objects:  17% (433/2546)   Compressing objects:  18% (459/2546)   Compressing objects:  19% (484/2546)   Compressing objects:  20% (510/2546)   Compressing objects:  21% (535/2546)   Compressing objects:  22% (561/2546)   Compressing objects:  23% (586/2546)   Compressing objects:  24% (612/2546)   Compressing objects:  25% (637/2546)   Compressing objects:  26% (662/2546)   Compressing objects:  27% (688/2546)   Compressing objects:  28% (713/2546)   Compressing objects:  29% (739/2546)   Compressing objects:  30% (764/2546)   Compressing objects:  31% (790/2546)   Compressing objects:  32% (815/2546)   Compressing objects:  33% (841/2546)   Compressing objects:  34% (866/2546)   Compressing objects:  35% (892/2546)   Compressing objects:  36% (917/2546)   Compressing objects:  37% (943/2546)   Compressing objects:  38% (968/2546)   Compressing objects:  39% (993/2546)   Compressing objects:  40% (1019/2546)   Compressing objects:  41% (1044/2546)   Compressing objects:  42% (1070/2546)   Compressing objects:  43% (1095/2546)   Compressing objects:  44% (1121/2546)   Compressing objects:  45% (1146/2546)   Compressing objects:  46% (1172/2546)   Compressing objects:  47% (1197/2546)   Compressing objects:  48% (1223/2546)   Compressing objects:  49% (1248/2546)   Compressing objects:  50% (1273/2546)   Compressing objects:  51% (1299/2546)   Compressing objects:  52% (1324/2546)   Compressing objects:  53% (1350/2546)   Compressing objects:  54% (1375/2546)   Compressing objects:  55% (1401/2546)   Compressing objects:  56% (1426/2546)   Compressing objects:  57% (1452/2546)   Compressing objects:  58% (1477/2546)   Compressing objects:  59% (1503/2546)   Compressing objects:  60% (1528/2546)   Compressing objects:  61% (1554/2546)   Compressing objects:  62% (1579/2546)   Compressing objects:  63% (1604/2546)   Compressing objects:  64% (1630/2546)   Compressing objects:  65% (1655/2546)   Compressing objects:  66% (1681/2546)   Compressing objects:  67% (1706/2546)   Compressing objects:  68% (1732/2546)   Compressing objects:  69% (1757/2546)   Compressing objects:  70% (1783/2546)   Compressing objects:  71% (1808/2546)   Compressing objects:  72% (1834/2546)   Compressing objects:  73% (1859/2546)   Compressing objects:  74% (1885/2546)   Compressing objects:  75% (1910/2546)   Compressing objects:  76% (1935/2546)   Compressing objects:  77% (1961/2546)   Compressing objects:  78% (1986/2546)   Compressing objects:  79% (2012/2546)   Compressing objects:  80% (2037/2546)   Compressing objects:  81% (2063/2546)   Compressing objects:  82% (2088/2546)   Compressing objects:  83% (2114/2546)   Compressing objects:  84% (2139/2546)   Compressing objects:  85% (2165/2546)   Compressing objects:  86% (2190/2546)   Compressing objects:  87% (2216/2546)   Compressing objects:  88% (2241/2546)   Compressing objects:  89% (2266/2546)   Compressing objects:  90% (2292/2546)   Compressing objects:  91% (2317/2546)   Compressing objects:  92% (2343/2546)   Compressing objects:  93% (2368/2546)   Compressing objects:  94% (2394/2546)   Compressing objects:  95% (2419/2546)   Compressing objects:  96% (2445/2546)   Compressing objects:  97% (2470/2546)   Compressing objects:  98% (2496/2546)   Compressing objects:  99% (2521/2546)   Compressing objects: 100% (2546/2546)   Compressing objects: 100% (2546/2546), done.
-Writing objects:   0% (1/3031)   Writing objects:   1% (31/3031)   Writing objects:   2% (63/3031)   Writing objects:   3% (91/3031)   Writing objects:   4% (122/3031)   Writing objects:   5% (152/3031)   Writing objects:   6% (183/3031)   Writing objects:   7% (213/3031)   Writing objects:   8% (243/3031)   Writing objects:   9% (273/3031)   Writing objects:  10% (304/3031)   Writing objects:  11% (335/3031)   Writing objects:  12% (364/3031)   Writing objects:  13% (395/3031)   Writing objects:  14% (425/3031)   Writing objects:  15% (455/3031)   Writing objects:  16% (486/3031)   Writing objects:  17% (516/3031)   Writing objects:  18% (546/3031)   Writing objects:  19% (576/3031)   Writing objects:  20% (607/3031)   Writing objects:  21% (637/3031)   Writing objects:  22% (667/3031)   Writing objects:  23% (698/3031)   Writing objects:  24% (728/3031)   Writing objects:  25% (758/3031)   Writing objects:  26% (789/3031)   Writing objects:  27% (819/3031)   Writing objects:  28% (849/3031)   Writing objects:  29% (879/3031)   Writing objects:  30% (910/3031)   Writing objects:  31% (940/3031)   Writing objects:  32% (970/3031)   Writing objects:  33% (1001/3031)   Writing objects:  34% (1031/3031)   Writing objects:  35% (1061/3031)   Writing objects:  36% (1092/3031)   Writing objects:  37% (1122/3031)   Writing objects:  38% (1152/3031)   Writing objects:  39% (1183/3031)   Writing objects:  40% (1213/3031)   Writing objects:  41% (1243/3031)   Writing objects:  42% (1274/3031)   Writing objects:  43% (1304/3031)   Writing objects:  44% (1334/3031)   Writing objects:  45% (1365/3031)   Writing objects:  46% (1395/3031)   Writing objects:  47% (1425/3031)   Writing objects:  48% (1455/3031)   Writing objects:  49% (1486/3031)   Writing objects:  50% (1516/3031)   Writing objects:  51% (1546/3031)   Writing objects:  52% (1577/3031)   Writing objects:  53% (1607/3031)   Writing objects:  54% (1637/3031)   Writing objects:  55% (1668/3031)   Writing objects:  56% (1698/3031)   Writing objects:  57% (1729/3031)   Writing objects:  58% (1758/3031)   Writing objects:  59% (1789/3031)   Writing objects:  60% (1819/3031)   Writing objects:  61% (1849/3031)   Writing objects:  62% (1880/3031)   Writing objects:  63% (1910/3031)   Writing objects:  64% (1940/3031)   Writing objects:  65% (1971/3031)   Writing objects:  66% (2001/3031)   Writing objects:  67% (2031/3031)   Writing objects:  68% (2062/3031)   Writing objects:  69% (2092/3031)   Writing objects:  70% (2122/3031)   Writing objects:  71% (2153/3031)   Writing objects:  72% (2183/3031)   Writing objects:  73% (2213/3031)   Writing objects:  74% (2244/3031)   Writing objects:  75% (2274/3031)   Writing objects:  76% (2304/3031)   Writing objects:  77% (2334/3031)   Writing objects:  78% (2365/3031)   Writing objects:  79% (2395/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  80% (2425/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  81% (2456/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  82% (2486/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  83% (2516/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  84% (2547/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  85% (2577/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  86% (2607/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  87% (2637/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  88% (2668/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  89% (2698/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  90% (2728/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  91% (2759/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  92% (2790/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  93% (2820/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  94% (2850/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  95% (2880/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  96% (2910/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  97% (2941/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  98% (2971/3031), 1.91 MiB | 3.40 MiB/s   Writing objects:  99% (3002/3031), 1.91 MiB | 3.40 MiB/s   Writing objects: 100% (3031/3031), 1.91 MiB | 3.40 MiB/s   Writing objects: 100% (3031/3031), 2.43 MiB | 3.40 MiB/s, done.
-Total 3031 (delta 296), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/296)   [Kremote: Resolving deltas:   1% (4/296)   [Kremote: Resolving deltas:   4% (13/296)   [Kremote: Resolving deltas:   6% (19/296)   [Kremote: Resolving deltas:   7% (21/296)   [Kremote: Resolving deltas:   8% (24/296)   [Kremote: Resolving deltas:   9% (27/296)   [Kremote: Resolving deltas:  10% (31/296)   [Kremote: Resolving deltas:  11% (33/296)   [Kremote: Resolving deltas:  21% (64/296)   [Kremote: Resolving deltas:  22% (66/296)   [Kremote: Resolving deltas:  23% (69/296)   [Kremote: Resolving deltas:  24% (72/296)   [Kremote: Resolving deltas:  25% (74/296)   [Kremote: Resolving deltas:  26% (78/296)   [Kremote: Resolving deltas:  27% (82/296)   [Kremote: Resolving deltas:  28% (83/296)   [Kremote: Resolving deltas:  35% (104/296)   [Kremote: Resolving deltas:  36% (109/296)   [Kremote: Resolving deltas:  37% (111/296)   [Kremote: Resolving deltas:  38% (114/296)   [Kremote: Resolving deltas:  39% (117/296)   [Kremote: Resolving deltas:  40% (119/296)   [Kremote: Resolving deltas:  41% (122/296)   [Kremote: Resolving deltas:  42% (127/296)   [Kremote: Resolving deltas:  43% (128/296)   [Kremote: Resolving deltas:  44% (131/296)   [Kremote: Resolving deltas:  45% (134/296)   [Kremote: Resolving deltas:  46% (137/296)   [Kremote: Resolving deltas:  47% (140/296)   [Kremote: Resolving deltas:  48% (143/296)   [Kremote: Resolving deltas:  49% (146/296)   [Kremote: Resolving deltas:  50% (148/296)   [Kremote: Resolving deltas:  51% (151/296)   [Kremote: Resolving deltas:  52% (154/296)   [Kremote: Resolving deltas:  53% (157/296)   [Kremote: Resolving deltas:  54% (160/296)   [Kremote: Resolving deltas:  55% (163/296)   [Kremote: Resolving deltas:  56% (166/296)   [Kremote: Resolving deltas:  57% (170/296)   [Kremote: Resolving deltas:  58% (172/296)   [Kremote: Resolving deltas:  59% (175/296)   [Kremote: Resolving deltas:  60% (179/296)   [Kremote: Resolving deltas:  64% (192/296)   [Kremote: Resolving deltas:  65% (193/296)   [Kremote: Resolving deltas:  66% (196/296)   [Kremote: Resolving deltas:  67% (199/296)   [Kremote: Resolving deltas:  69% (205/296)   [Kremote: Resolving deltas:  70% (209/296)   [Kremote: Resolving deltas:  72% (215/296)   [Kremote: Resolving deltas:  73% (218/296)   [Kremote: Resolving deltas:  74% (220/296)   [Kremote: Resolving deltas:  75% (222/296)   [Kremote: Resolving deltas:  76% (225/296)   [Kremote: Resolving deltas:  77% (228/296)   [Kremote: Resolving deltas:  78% (231/296)   [Kremote: Resolving deltas:  79% (234/296)   [Kremote: Resolving deltas:  80% (237/296)   [Kremote: Resolving deltas:  81% (240/296)   [Kremote: Resolving deltas:  82% (243/296)   [Kremote: Resolving deltas:  83% (247/296)   [Kremote: Resolving deltas:  84% (249/296)   [Kremote: Resolving deltas:  85% (252/296)   [Kremote: Resolving deltas:  86% (255/296)   [Kremote: Resolving deltas:  87% (258/296)   [Kremote: Resolving deltas:  88% (262/296)   [Kremote: Resolving deltas:  89% (264/296)   [Kremote: Resolving deltas:  90% (267/296)   [Kremote: Resolving deltas:  91% (270/296)   [Kremote: Resolving deltas:  92% (274/296)   [Kremote: Resolving deltas:  93% (277/296)   [Kremote: Resolving deltas:  94% (279/296)   [Kremote: Resolving deltas:  95% (282/296)   [Kremote: Resolving deltas:  96% (285/296)   [Kremote: Resolving deltas:  97% (288/296)   [Kremote: Resolving deltas:  98% (292/296)   [Kremote: Resolving deltas:  99% (294/296)   [Kremote: Resolving deltas: 100% (296/296)   [Kremote: Resolving deltas: 100% (296/296), done.[K
-To git@github.com:nstrayer/network3d.git
- * [new branch]      master -> master
-]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ touch README.md
-]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ [K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ touch README.mdlgit "first stuff is in and basic network renders well."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit remote add origin git@github.com:nstrayer/network3d.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinit[K[3Pcd ..[3Plsrm -rf .git/ls[Kmv .gitignore ../../../ls[Kgit "ported over from bipartite library and things are working with a basic example thus far"[K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "ported over from bipartite library and things are working with a basic example thus far"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs[Kmv .gitignore ../../../ls[Krm -rf .git/ls[Kcd ..git initremote add origin git@github.com:nstrayer/network3d.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Plgit "first stuff is in and basic network renders well."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctouch README.md[K[Kcd ne[K[Kinst/htmlwidgets/src/
-]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ touch progressMessage.js
-]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ mv ProgressMessage.js[C[C[C ProgressMessage.jsp ProgressMessage.jsr ProgressMessage.jso ProgressMessage.jsg ProgressMessage.jsressMessage.js ProgressMessage.js
-]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ ls
-total 100K
-drwxr-xr-x 2 nick nick 4.0K Apr  5 15:47 [0m[01;34m.[0m
-drwxr-xr-x 5 nick nick 4.0K Apr  5 11:08 [01;34m..[0m
--rw-r--r-- 1 nick nick  657 Apr  5 14:21 BuildEdges.js
--rw-r--r-- 1 nick nick 1.1K Apr  5 13:22 BuildNodes.js
--rw-r--r-- 1 nick nick  779 Apr  5 14:24 GenerateEdgePositions.js
--rw-r--r-- 1 nick nick  440 Apr  5 14:03 GeneratePointPositions.js
--rw-r--r-- 1 nick nick  657 Apr  5 11:20 GeneratePointStaticAttrs.js
--rw-r--r-- 1 nick nick  618 Apr  5 14:18 main.js
--rw-r--r-- 1 nick nick 1007 Apr  5 13:22 MakeNodeMaterial.js
--rw-r--r-- 1 nick nick  13K Apr  5 11:42 PhewasNetworkFull.js
--rw-r--r-- 1 nick nick  14K Apr  5 16:00 PhewasNetwork.js
--rw-r--r-- 1 nick nick  770 Apr  5 16:00 ProgressMessage.js
--rw-r--r-- 1 nick nick  602 Apr  5 11:22 SetupCamera.js
--rw-r--r-- 1 nick nick  432 Apr  5 13:34 SetupControls.js
--rw-r--r-- 1 nick nick  242 Apr  5 14:30 SetupRaycaster.js
--rw-r--r-- 1 nick nick  395 Apr  5 11:40 SetupRenderer.js
--rw-r--r-- 1 nick nick  349 Apr  5 13:27 SetupScene.js
--rw-r--r-- 1 nick nick  548 Apr  5 13:57 SetupSimulation.js
--rw-r--r-- 1 nick nick  763 Apr  5 14:28 Tooltip.js
-]0;/home/nick/fast_bind/network3d/inst/htmlwidgets/src]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets/src[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets/src[00m$ cd ..
-]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ npm inms[K[Kstall --save dat.gui
-[?25l[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] / rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] - rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m 24faf2dc970e7f17[0m[K[[90m..................[0m] - loadIdealTree:loadAllDepsIntoIdealTree: [7msill[0m [35minstall[0m loadIdealTree[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] | loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] - loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] \ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] - loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m dat.gui@0.7.1 checking installable status[0m[K[[7m      [27m[90m............[0m] / diffTrees: [7msill[0m [35minstall[0m generateActionsToTake[0m[K[[7m         [27m[90m.........[0m] / extract:nan: [7msill[0m [35mpacote[0m nan@https://registry.npmjs.org/nan/-/nan-2.10.0.tgz extracted to /home/nick/fast_bind/network3d/inst/htmlwidgets/node_module[0m[K[[7m         [27m[90m.........[0m] / extract:nan: [7msill[0m [35mpacote[0m nan@https://registry.npmjs.org/nan/-/nan-2.10.0.tgz extracted to /home/nick/fast_bind/network3d/inst/htmlwidgets/node_module[0m[K[[7m         [27m[90m.........[0m] / extract:nan: [7msill[0m [35mpacote[0m nan@https://registry.npmjs.org/nan/-/nan-2.10.0.tgz extracted to /home/nick/fast_bind/network3d/inst/htmlwidgets/node_module[0m[K[[7m         [27m[90m.........[0m] - extract:nan: [7msill[0m [35mpacote[0m nan@https://registry.npmjs.org/nan/-/nan-2.10.0.tgz extracted to /home/nick/fast_bind/network3d/inst/htmlwidgets/node_module[0m[K[[7m          [27m[90m........[0m] \ extract:fsevents: [7msill[0m [35mpacote[0m fsevents@https://registry.npmjs.org/fsevents/-/fsevents-1.1.3.tgz extracted to /home/nick/fast_bind/network3d/inst/html[0m[K[[7m            [27m[90m......[0m] | finalize:inflight: [7msill[0m [35mfinalize[0m /home/nick/fast_bind/network3d/inst/htmlwidgets/node_modules/fsevents/node_modules/inflight[0m[K[[7m            [27m[90m......[0m] - refresh-package-json:assert-plus: [7msill[0m [35mrefresh-package-json[0m /home/nick/fast_bind/network3d/inst/htmlwidgets/node_modules/fsevents/node_modules/path-i[0m[K[[7m            [27m[90m......[0m] \ postinstall:dat.gui: [32minfo[0m [35mlifecycle[0m dat.gui@0.7.1~postinstall: dat.gui@0.7.1[0m[K[[7m            [27m[90m......[0m] | postinstall: [32minfo[0m [35mlifecycle[0m dat.gui@0.7.1~postinstall: dat.gui@0.7.1[0m[K[[7m            [27m[90m......[0m] | postinstall: [32minfo[0m [35mlifecycle[0m dat.gui@0.7.1~postinstall: dat.gui@0.7.1[0m[K[[7m            [27m[90m......[0m] | postinstall: [32minfo[0m [35mlifecycle[0m dat.gui@0.7.1~postinstall: dat.gui@0.7.1[0m[K[[7m            [27m[90m......[0m] / postinstall: [32minfo[0m [35mlifecycle[0m dat.gui@0.7.1~postinstall: dat.gui@0.7.1[0m[K[K[?25h[37;40mnpm[0m [0m[30;43mWARN[0m[35m[0m htmlwidgets@1.0.0 No description
-[0m[37;40mnpm[0m [0m[30;43mWARN[0m[35m[0m htmlwidgets@1.0.0 No repository field.
-[0m[37;40mnpm[0m [0m[30;43mWARN[0m [0m[35moptional[0m SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/fsevents):
-[0m[37;40mnpm[0m [0m[30;43mWARN[0m [0m[35mnotsup[0m SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
-[0m
-+ dat.gui@0.7.1
-added 117 packages in 2.15s
-]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ [K]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ cd ..
-]0;/home/nick/fast_bind/network3d/inst]0;nick@compooper: ~/fast_bind/network3d/inst[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst[00m$ cd ..
-]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ ls
+[K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ ls
 total 60K
 drwxr-xr-x  8 nick nick 4.0K Apr  5 14:51 [0m[01;34m.[0m
 drwx------ 28 nick nick 4.0K Apr  5 10:36 [01;34m..[0m
--rw-r--r--  1 nick nick  596 Apr  5 16:03 build_and_run.R
+-rw-r--r--  1 nick nick  979 Apr  6 12:27 build_and_run.R
 drwxr-xr-x  2 nick nick 4.0K Apr  5 10:37 [01;34mdata[0m
 -rw-r--r--  1 nick nick  370 Apr  5 10:36 DESCRIPTION
-drwxr-xr-x  8 nick nick 4.0K Apr  5 14:51 [01;34m.git[0m
+drwxr-xr-x  8 nick nick 4.0K Apr  6 13:05 [01;34m.git[0m
 -rw-r--r--  1 nick nick    9 Apr  5 14:46 .gitignore
 drwxr-xr-x  3 nick nick 4.0K Apr  5 10:36 [01;34minst[0m
 drwxr-xr-x  2 nick nick 4.0K Apr  5 10:36 [01;34mman[0m
@@ -917,86 +13,6 @@ drwxr-xr-x  2 nick nick 4.0K Apr  5 10:36 [01;34mman[0m
 -rw-r--r--  1 nick nick  356 Apr  5 11:05 network3d.Rproj
 drwxr-xr-x  2 nick nick 4.0K Apr  5 11:58 [01;34mR[0m
 -rw-r--r--  1 nick nick   28 Apr  5 10:36 .Rbuildignore
--rw-r--r--  1 nick nick  283 Apr  5 14:53 README.md
+-rw-r--r--  1 nick nick  595 Apr  6 14:52 README.md
 drwxr-xr-x  4 nick nick 4.0K Apr  5 10:36 [01;34m.Rproj.user[0m
-]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ g[Klgit "added the simulation to[Kuner and the progress popup"
-[master 8021cd1] added the simulation tuner and the progress popup
- 93 files changed, 29517 insertions(+), 302 deletions(-)
- rewrite .Rproj.user/4CADD3E8/console06/EDD55FBD (80%)
- create mode 100644 .Rproj.user/4CADD3E8/sources/prop/6963D976
- create mode 100644 .Rproj.user/4CADD3E8/sources/prop/8652A442
- create mode 100644 .Rproj.user/4CADD3E8/sources/prop/D191A9AF
- delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/24D75053
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA-contents
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/342378CA
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/342378CA-contents
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/3A405C51-contents
- delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/4D036C75
- delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/AA5BE1B1
- delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/D339338A
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/EE0593DB-contents
- create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/F5EEB1B4-contents
- create mode 100644 README.md
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/.babelrc
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/API.md
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/CHANGELOG.md
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/README.md
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/bower.json
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.css
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.js.map
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.min.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.module.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.module.js.map
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/example.html
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/licenseBanner.txt
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/package.json
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/rollup.config.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/rollup.config.min.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/Color.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/interpret.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/math.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/toString.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/BooleanController.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/ColorController.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/Controller.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/ControllerFactory.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/FunctionController.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/NumberController.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/NumberControllerBox.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/NumberControllerSlider.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/OptionController.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/StringController.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/dom/CenteredDiv.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/dom/dom.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/GUI.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/_structure.scss
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/saveDialogue.html.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/style.scss
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/index.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/utils/common.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/utils/css.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/utils/requestAnimationFrame.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/index.html
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/jquery.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/qunit.css
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/qunit.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/bundle.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/common.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/es6.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/index.html
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/package.json
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/rollup.config.js
- create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/webpack.config.js
- create mode 100644 inst/htmlwidgets/src/ProgressMessage.js
-Counting objects: 105, done.
-Delta compression using up to 8 threads.
-Compressing objects:   0% (1/101)   Compressing objects:   1% (2/101)   Compressing objects:   2% (3/101)   Compressing objects:   3% (4/101)   Compressing objects:   4% (5/101)   Compressing objects:   5% (6/101)   Compressing objects:   6% (7/101)   Compressing objects:   7% (8/101)   Compressing objects:   8% (9/101)   Compressing objects:   9% (10/101)   Compressing objects:  10% (11/101)   Compressing objects:  11% (12/101)   Compressing objects:  12% (13/101)   Compressing objects:  13% (14/101)   Compressing objects:  14% (15/101)   Compressing objects:  15% (16/101)   Compressing objects:  16% (17/101)   Compressing objects:  17% (18/101)   Compressing objects:  18% (19/101)   Compressing objects:  19% (20/101)   Compressing objects:  20% (21/101)   Compressing objects:  21% (22/101)   Compressing objects:  22% (23/101)   Compressing objects:  23% (24/101)   Compressing objects:  24% (25/101)   Compressing objects:  25% (26/101)   Compressing objects:  26% (27/101)   Compressing objects:  27% (28/101)   Compressing objects:  28% (29/101)   Compressing objects:  29% (30/101)   Compressing objects:  30% (31/101)   Compressing objects:  31% (32/101)   Compressing objects:  32% (33/101)   Compressing objects:  33% (34/101)   Compressing objects:  34% (35/101)   Compressing objects:  35% (36/101)   Compressing objects:  36% (37/101)   Compressing objects:  37% (38/101)   Compressing objects:  38% (39/101)   Compressing objects:  39% (40/101)   Compressing objects:  40% (41/101)   Compressing objects:  41% (42/101)   Compressing objects:  42% (43/101)   Compressing objects:  43% (44/101)   Compressing objects:  44% (45/101)   Compressing objects:  45% (46/101)   Compressing objects:  46% (47/101)   Compressing objects:  47% (48/101)   Compressing objects:  48% (49/101)   Compressing objects:  49% (50/101)   Compressing objects:  50% (51/101)   Compressing objects:  51% (52/101)   Compressing objects:  52% (53/101)   Compressing objects:  53% (54/101)   Compressing objects:  54% (55/101)   Compressing objects:  55% (56/101)   Compressing objects:  56% (57/101)   Compressing objects:  57% (58/101)   Compressing objects:  58% (59/101)   Compressing objects:  59% (60/101)   Compressing objects:  60% (61/101)   Compressing objects:  61% (62/101)   Compressing objects:  62% (63/101)   Compressing objects:  63% (64/101)   Compressing objects:  64% (65/101)   Compressing objects:  65% (66/101)   Compressing objects:  66% (67/101)   Compressing objects:  67% (68/101)   Compressing objects:  68% (69/101)   Compressing objects:  69% (70/101)   Compressing objects:  70% (71/101)   Compressing objects:  71% (72/101)   Compressing objects:  72% (73/101)   Compressing objects:  73% (74/101)   Compressing objects:  74% (75/101)   Compressing objects:  75% (76/101)   Compressing objects:  76% (77/101)   Compressing objects:  77% (78/101)   Compressing objects:  78% (79/101)   Compressing objects:  79% (80/101)   Compressing objects:  80% (81/101)   Compressing objects:  81% (82/101)   Compressing objects:  82% (83/101)   Compressing objects:  83% (84/101)   Compressing objects:  84% (85/101)   Compressing objects:  85% (86/101)   Compressing objects:  86% (87/101)   Compressing objects:  87% (88/101)   Compressing objects:  88% (89/101)   Compressing objects:  89% (90/101)   Compressing objects:  90% (91/101)   Compressing objects:  91% (92/101)   Compressing objects:  92% (93/101)   Compressing objects:  93% (94/101)   Compressing objects:  94% (95/101)   Compressing objects:  95% (96/101)   Compressing objects:  96% (97/101)   Compressing objects:  97% (98/101)   Compressing objects:  98% (99/101)   Compressing objects:  99% (100/101)   Compressing objects: 100% (101/101)   Compressing objects: 100% (101/101), done.
-Writing objects:   0% (1/105)   Writing objects:   1% (2/105)   Writing objects:   2% (3/105)   Writing objects:   3% (4/105)   Writing objects:   4% (5/105)   Writing objects:   5% (6/105)   Writing objects:   6% (7/105)   Writing objects:   7% (8/105)   Writing objects:   8% (9/105)   Writing objects:   9% (10/105)   Writing objects:  10% (11/105)   Writing objects:  11% (12/105)   Writing objects:  12% (13/105)   Writing objects:  13% (14/105)   Writing objects:  14% (15/105)   Writing objects:  15% (16/105)   Writing objects:  16% (17/105)   Writing objects:  17% (18/105)   Writing objects:  18% (19/105)   Writing objects:  19% (20/105)   Writing objects:  20% (21/105)   Writing objects:  22% (24/105)   Writing objects:  23% (25/105)   Writing objects:  24% (26/105)   Writing objects:  25% (27/105)   Writing objects:  26% (28/105)   Writing objects:  27% (29/105)   Writing objects:  28% (30/105)   Writing objects:  29% (31/105)   Writing objects:  30% (32/105)   Writing objects:  31% (33/105)   Writing objects:  32% (34/105)   Writing objects:  33% (35/105)   Writing objects:  34% (36/105)   Writing objects:  35% (37/105)   Writing objects:  37% (39/105)   Writing objects:  38% (40/105)   Writing objects:  39% (41/105)   Writing objects:  40% (42/105)   Writing objects:  41% (44/105)   Writing objects:  42% (45/105)   Writing objects:  43% (46/105)   Writing objects:  44% (47/105)   Writing objects:  45% (48/105)   Writing objects:  46% (49/105)   Writing objects:  47% (50/105)   Writing objects:  48% (51/105)   Writing objects:  49% (52/105)   Writing objects:  50% (53/105)   Writing objects:  51% (54/105)   Writing objects:  52% (55/105)   Writing objects:  53% (56/105)   Writing objects:  54% (57/105)   Writing objects:  55% (58/105)   Writing objects:  56% (59/105)   Writing objects:  57% (60/105)   Writing objects:  58% (61/105)   Writing objects:  59% (62/105)   Writing objects:  60% (63/105)   Writing objects:  61% (65/105)   Writing objects:  62% (66/105)   Writing objects:  64% (68/105)   Writing objects:  65% (69/105)   Writing objects:  66% (70/105)   Writing objects:  67% (71/105)   Writing objects:  68% (72/105)   Writing objects:  69% (73/105)   Writing objects:  70% (74/105)   Writing objects:  71% (75/105)   Writing objects:  72% (76/105)   Writing objects:  73% (77/105)   Writing objects:  74% (78/105)   Writing objects:  75% (79/105)   Writing objects:  76% (80/105)   Writing objects:  77% (81/105)   Writing objects:  78% (82/105)   Writing objects:  79% (83/105)   Writing objects:  80% (84/105)   Writing objects:  81% (86/105)   Writing objects:  82% (87/105)   Writing objects:  83% (88/105)   Writing objects:  84% (89/105)   Writing objects:  85% (90/105)   Writing objects:  86% (91/105)   Writing objects:  87% (92/105)   Writing objects:  88% (93/105)   Writing objects:  89% (94/105)   Writing objects:  90% (95/105)   Writing objects:  91% (96/105)   Writing objects:  92% (97/105)   Writing objects:  93% (98/105)   Writing objects:  94% (99/105)   Writing objects:  95% (100/105)   Writing objects:  96% (101/105)   Writing objects:  97% (102/105)   Writing objects:  98% (103/105)   Writing objects:  99% (104/105)   Writing objects: 100% (105/105)   Writing objects: 100% (105/105), 253.66 KiB | 0 bytes/s, done.
-Total 105 (delta 27), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/27)   [Kremote: Resolving deltas:   3% (1/27)   [Kremote: Resolving deltas:  14% (4/27)   [Kremote: Resolving deltas:  18% (5/27)   [Kremote: Resolving deltas:  22% (6/27)   [Kremote: Resolving deltas:  29% (8/27)   [Kremote: Resolving deltas:  33% (9/27)   [Kremote: Resolving deltas:  37% (10/27)   [Kremote: Resolving deltas:  40% (11/27)   [Kremote: Resolving deltas:  44% (12/27)   [Kremote: Resolving deltas:  48% (13/27)   [Kremote: Resolving deltas:  51% (14/27)   [Kremote: Resolving deltas:  55% (15/27)   [Kremote: Resolving deltas:  59% (16/27)   [Kremote: Resolving deltas:  62% (17/27)   [Kremote: Resolving deltas:  66% (18/27)   [Kremote: Resolving deltas:  70% (19/27)   [Kremote: Resolving deltas:  74% (20/27)   [Kremote: Resolving deltas:  77% (21/27)   [Kremote: Resolving deltas:  81% (22/27)   [Kremote: Resolving deltas:  85% (23/27)   [Kremote: Resolving deltas:  88% (24/27)   [Kremote: Resolving deltas:  92% (25/27)   [Kremote: Resolving deltas:  96% (26/27)   [Kremote: Resolving deltas: 100% (27/27)   [Kremote: Resolving deltas: 100% (27/27), completed with 18 local objects.[K
-To git@github.com:nstrayer/network3d.git
-   b915193..8021cd1  master -> master
-]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ [K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "totally got rid of the ugly floating constants object and replaced it with indivieu[K[K[Kiduakl s[K[K[K[K[Kl=[K[Kal settings and compartmentalioz[K[K[Kized settings obj ects for the camera and controls"
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "added fore ep[K[K[K[Kce explorer option"

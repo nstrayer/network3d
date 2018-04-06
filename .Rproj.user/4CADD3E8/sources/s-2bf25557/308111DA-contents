@@ -41,6 +41,7 @@ network3d <- function(
   manybody_strength = -1,
   link_strength = NULL,
   static_length_strength = FALSE,
+  force_explorer = TRUE,
   width = NULL, height = NULL, elementId = NULL) {
 
   # forward options using x
@@ -62,7 +63,8 @@ network3d <- function(
     max_iterations = max_iterations,
     manybody_strength = manybody_strength,
     link_strength = link_strength,
-    static_length_strength = static_length_strength
+    static_length_strength = static_length_strength,
+    force_explorer = force_explorer
   )
 
   # node_outline_black: true, // Outline the node circles in black? Default is white
