@@ -3,11 +3,15 @@ library(tidyverse)
 #https://snap.stanford.edu/data/ca-GrQc.html
 collabs <- read_tsv('data/ca-GrQc.txt', skip = 4, col_names = c('source', 'target'))
 
-makeNetworkData <- function(size = 500){
+makeNetworkData <- function(size = 500, random_sizes = FALSE){
 
   vertices <- data_frame(id = unique(collabs$source)) %>%
     mutate(index = 1:n(), color = 'steelblue', name = as.character(index)) %>%
     head(size)
+
+  if(random_sizes){
+    vertices$size = runif(nrow(vertices), min = 0, max = 0.3)
+  }
 
   edges <- collabs %>%
     filter((source %in% vertices$id) & (target %in% vertices$id))
@@ -20,8 +24,18 @@ makeNetworkData <- function(size = 500){
 
 
 data <- makeNetworkData(2000)
-
+data_sized_verts <- makeNetworkData(2000, TRUE)
 
 devtools::install()
 network3d::network3d(data, max_iterations = 75)
 
+# network3d::network3d(data_sized_verts, max_iterations = 75)
+
+# testing camera custom settings
+# network3d::network3d(
+#   data,
+#   camera = list(
+#     start_pos = list(x=1.2, y=1.2, z=20)
+#   ),
+#   max_iterations = 75
+# )

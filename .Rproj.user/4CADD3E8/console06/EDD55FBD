@@ -1,136 +1,4 @@
 
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/bench/jquery.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/bench/results.txt
- create mode 100755 inst/htmlwidgets/node_modules/lexical-scope/bench/run.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/example/detect.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/example/src.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/index.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/package.json
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/argument.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/assign_implicit.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/detect.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/argument.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/assign_implicit.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/buffer_call.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/buffer_isbuffer.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/buffer_var.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/detect.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/labels.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/multiple-exports.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/named_arg.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/obj.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/return_hash.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/right_hand.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/files/try_catch.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/labels.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/multiple-exports.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/named_arg.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/obj.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/package.json
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/props.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/return_hash.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/right_hand.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/shebang.js
- create mode 100644 inst/htmlwidgets/node_modules/lexical-scope/test/try_catch.js
- create mode 100644 inst/htmlwidgets/node_modules/lodash.memoize/LICENSE.txt
- create mode 100644 inst/htmlwidgets/node_modules/lodash.memoize/README.md
- create mode 100644 inst/htmlwidgets/node_modules/lodash.memoize/index.js
- create mode 100644 inst/htmlwidgets/node_modules/lodash.memoize/package.json
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/README.md
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/index.js
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/node_modules/hash-base/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/node_modules/hash-base/README.md
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/node_modules/hash-base/index.js
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/node_modules/hash-base/package.json
- create mode 100644 inst/htmlwidgets/node_modules/md5.js/package.json
- create mode 100755 inst/htmlwidgets/node_modules/micromatch/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/micromatch/README.md
- create mode 100755 inst/htmlwidgets/node_modules/micromatch/index.js
- create mode 100644 inst/htmlwidgets/node_modules/micromatch/lib/chars.js
- create mode 100644 inst/htmlwidgets/node_modules/micromatch/lib/expand.js
- create mode 100644 inst/htmlwidgets/node_modules/micromatch/lib/glob.js
- create mode 100644 inst/htmlwidgets/node_modules/micromatch/lib/utils.js
- create mode 100644 inst/htmlwidgets/node_modules/micromatch/package.json
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/1.js
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/README.md
- create mode 100755 inst/htmlwidgets/node_modules/miller-rabin/bin/miller-rabin
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/lib/mr.js
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/package.json
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/test.js
- create mode 100644 inst/htmlwidgets/node_modules/miller-rabin/test/api-test.js
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-assert/index.js
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-assert/package.json
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-assert/readme.md
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-crypto-utils/.npmignore
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-crypto-utils/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-crypto-utils/README.md
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-crypto-utils/lib/utils.js
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-crypto-utils/package.json
- create mode 100644 inst/htmlwidgets/node_modules/minimalistic-crypto-utils/test/utils-test.js
- create mode 100644 inst/htmlwidgets/node_modules/minimatch/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/minimatch/README.md
- create mode 100644 inst/htmlwidgets/node_modules/minimatch/minimatch.js
- create mode 100644 inst/htmlwidgets/node_modules/minimatch/package.json
- create mode 100644 inst/htmlwidgets/node_modules/minimist/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/minimist/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/minimist/example/parse.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/index.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/package.json
- create mode 100644 inst/htmlwidgets/node_modules/minimist/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/all_bool.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/bool.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/dash.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/default_bool.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/dotted.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/kv_short.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/long.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/num.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/parse.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/parse_modified.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/short.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/stop_early.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/unknown.js
- create mode 100644 inst/htmlwidgets/node_modules/minimist/test/whitespace.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/LICENSE
- create mode 100755 inst/htmlwidgets/node_modules/mkdirp/bin/cmd.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/bin/usage.txt
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/examples/pow.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/index.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/.travis.yml
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/LICENSE
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/example/parse.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/index.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/package.json
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/dash.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/default_bool.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/dotted.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/long.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/parse.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/parse_modified.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/short.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/node_modules/minimist/test/whitespace.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/package.json
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/readme.markdown
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/chmod.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/clobber.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/mkdirp.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/opts_fs.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/opts_fs_sync.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/perm.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/perm_sync.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/race.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/rel.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/return.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/return_sync.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/root.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/sync.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/umask.js
- create mode 100644 inst/htmlwidgets/node_modules/mkdirp/test/umask_sync.js
  create mode 100644 inst/htmlwidgets/node_modules/module-deps/.travis.yml
  create mode 100644 inst/htmlwidgets/node_modules/module-deps/CHANGELOG.md
  create mode 100644 inst/htmlwidgets/node_modules/module-deps/LICENSE
@@ -1052,3 +920,83 @@ drwxr-xr-x  2 nick nick 4.0K Apr  5 11:58 [01;34mR[0m
 -rw-r--r--  1 nick nick  283 Apr  5 14:53 README.md
 drwxr-xr-x  4 nick nick 4.0K Apr  5 10:36 [01;34m.Rproj.user[0m
 ]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ g[Klgit "added the simulation to[Kuner and the progress popup"
+[master 8021cd1] added the simulation tuner and the progress popup
+ 93 files changed, 29517 insertions(+), 302 deletions(-)
+ rewrite .Rproj.user/4CADD3E8/console06/EDD55FBD (80%)
+ create mode 100644 .Rproj.user/4CADD3E8/sources/prop/6963D976
+ create mode 100644 .Rproj.user/4CADD3E8/sources/prop/8652A442
+ create mode 100644 .Rproj.user/4CADD3E8/sources/prop/D191A9AF
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/24D75053
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA-contents
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/342378CA
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/342378CA-contents
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/3A405C51-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/4D036C75
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/AA5BE1B1
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/D339338A
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/EE0593DB-contents
+ create mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/F5EEB1B4-contents
+ create mode 100644 README.md
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/.babelrc
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/API.md
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/CHANGELOG.md
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/LICENSE
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/README.md
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/bower.json
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.css
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.js.map
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.min.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.module.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/build/dat.gui.module.js.map
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/example.html
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/licenseBanner.txt
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/package.json
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/rollup.config.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/rollup.config.min.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/Color.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/interpret.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/math.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/color/toString.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/BooleanController.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/ColorController.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/Controller.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/ControllerFactory.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/FunctionController.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/NumberController.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/NumberControllerBox.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/NumberControllerSlider.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/OptionController.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/controllers/StringController.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/dom/CenteredDiv.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/dom/dom.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/GUI.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/_structure.scss
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/saveDialogue.html.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/gui/style.scss
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/index.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/utils/common.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/utils/css.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/src/dat/utils/requestAnimationFrame.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/index.html
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/jquery.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/qunit.css
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tests/qunit.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/bundle.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/common.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/es6.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/index.html
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/package.json
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/rollup.config.js
+ create mode 100644 inst/htmlwidgets/node_modules/dat.gui/tmp/webpack.config.js
+ create mode 100644 inst/htmlwidgets/src/ProgressMessage.js
+Counting objects: 105, done.
+Delta compression using up to 8 threads.
+Compressing objects:   0% (1/101)   Compressing objects:   1% (2/101)   Compressing objects:   2% (3/101)   Compressing objects:   3% (4/101)   Compressing objects:   4% (5/101)   Compressing objects:   5% (6/101)   Compressing objects:   6% (7/101)   Compressing objects:   7% (8/101)   Compressing objects:   8% (9/101)   Compressing objects:   9% (10/101)   Compressing objects:  10% (11/101)   Compressing objects:  11% (12/101)   Compressing objects:  12% (13/101)   Compressing objects:  13% (14/101)   Compressing objects:  14% (15/101)   Compressing objects:  15% (16/101)   Compressing objects:  16% (17/101)   Compressing objects:  17% (18/101)   Compressing objects:  18% (19/101)   Compressing objects:  19% (20/101)   Compressing objects:  20% (21/101)   Compressing objects:  21% (22/101)   Compressing objects:  22% (23/101)   Compressing objects:  23% (24/101)   Compressing objects:  24% (25/101)   Compressing objects:  25% (26/101)   Compressing objects:  26% (27/101)   Compressing objects:  27% (28/101)   Compressing objects:  28% (29/101)   Compressing objects:  29% (30/101)   Compressing objects:  30% (31/101)   Compressing objects:  31% (32/101)   Compressing objects:  32% (33/101)   Compressing objects:  33% (34/101)   Compressing objects:  34% (35/101)   Compressing objects:  35% (36/101)   Compressing objects:  36% (37/101)   Compressing objects:  37% (38/101)   Compressing objects:  38% (39/101)   Compressing objects:  39% (40/101)   Compressing objects:  40% (41/101)   Compressing objects:  41% (42/101)   Compressing objects:  42% (43/101)   Compressing objects:  43% (44/101)   Compressing objects:  44% (45/101)   Compressing objects:  45% (46/101)   Compressing objects:  46% (47/101)   Compressing objects:  47% (48/101)   Compressing objects:  48% (49/101)   Compressing objects:  49% (50/101)   Compressing objects:  50% (51/101)   Compressing objects:  51% (52/101)   Compressing objects:  52% (53/101)   Compressing objects:  53% (54/101)   Compressing objects:  54% (55/101)   Compressing objects:  55% (56/101)   Compressing objects:  56% (57/101)   Compressing objects:  57% (58/101)   Compressing objects:  58% (59/101)   Compressing objects:  59% (60/101)   Compressing objects:  60% (61/101)   Compressing objects:  61% (62/101)   Compressing objects:  62% (63/101)   Compressing objects:  63% (64/101)   Compressing objects:  64% (65/101)   Compressing objects:  65% (66/101)   Compressing objects:  66% (67/101)   Compressing objects:  67% (68/101)   Compressing objects:  68% (69/101)   Compressing objects:  69% (70/101)   Compressing objects:  70% (71/101)   Compressing objects:  71% (72/101)   Compressing objects:  72% (73/101)   Compressing objects:  73% (74/101)   Compressing objects:  74% (75/101)   Compressing objects:  75% (76/101)   Compressing objects:  76% (77/101)   Compressing objects:  77% (78/101)   Compressing objects:  78% (79/101)   Compressing objects:  79% (80/101)   Compressing objects:  80% (81/101)   Compressing objects:  81% (82/101)   Compressing objects:  82% (83/101)   Compressing objects:  83% (84/101)   Compressing objects:  84% (85/101)   Compressing objects:  85% (86/101)   Compressing objects:  86% (87/101)   Compressing objects:  87% (88/101)   Compressing objects:  88% (89/101)   Compressing objects:  89% (90/101)   Compressing objects:  90% (91/101)   Compressing objects:  91% (92/101)   Compressing objects:  92% (93/101)   Compressing objects:  93% (94/101)   Compressing objects:  94% (95/101)   Compressing objects:  95% (96/101)   Compressing objects:  96% (97/101)   Compressing objects:  97% (98/101)   Compressing objects:  98% (99/101)   Compressing objects:  99% (100/101)   Compressing objects: 100% (101/101)   Compressing objects: 100% (101/101), done.
+Writing objects:   0% (1/105)   Writing objects:   1% (2/105)   Writing objects:   2% (3/105)   Writing objects:   3% (4/105)   Writing objects:   4% (5/105)   Writing objects:   5% (6/105)   Writing objects:   6% (7/105)   Writing objects:   7% (8/105)   Writing objects:   8% (9/105)   Writing objects:   9% (10/105)   Writing objects:  10% (11/105)   Writing objects:  11% (12/105)   Writing objects:  12% (13/105)   Writing objects:  13% (14/105)   Writing objects:  14% (15/105)   Writing objects:  15% (16/105)   Writing objects:  16% (17/105)   Writing objects:  17% (18/105)   Writing objects:  18% (19/105)   Writing objects:  19% (20/105)   Writing objects:  20% (21/105)   Writing objects:  22% (24/105)   Writing objects:  23% (25/105)   Writing objects:  24% (26/105)   Writing objects:  25% (27/105)   Writing objects:  26% (28/105)   Writing objects:  27% (29/105)   Writing objects:  28% (30/105)   Writing objects:  29% (31/105)   Writing objects:  30% (32/105)   Writing objects:  31% (33/105)   Writing objects:  32% (34/105)   Writing objects:  33% (35/105)   Writing objects:  34% (36/105)   Writing objects:  35% (37/105)   Writing objects:  37% (39/105)   Writing objects:  38% (40/105)   Writing objects:  39% (41/105)   Writing objects:  40% (42/105)   Writing objects:  41% (44/105)   Writing objects:  42% (45/105)   Writing objects:  43% (46/105)   Writing objects:  44% (47/105)   Writing objects:  45% (48/105)   Writing objects:  46% (49/105)   Writing objects:  47% (50/105)   Writing objects:  48% (51/105)   Writing objects:  49% (52/105)   Writing objects:  50% (53/105)   Writing objects:  51% (54/105)   Writing objects:  52% (55/105)   Writing objects:  53% (56/105)   Writing objects:  54% (57/105)   Writing objects:  55% (58/105)   Writing objects:  56% (59/105)   Writing objects:  57% (60/105)   Writing objects:  58% (61/105)   Writing objects:  59% (62/105)   Writing objects:  60% (63/105)   Writing objects:  61% (65/105)   Writing objects:  62% (66/105)   Writing objects:  64% (68/105)   Writing objects:  65% (69/105)   Writing objects:  66% (70/105)   Writing objects:  67% (71/105)   Writing objects:  68% (72/105)   Writing objects:  69% (73/105)   Writing objects:  70% (74/105)   Writing objects:  71% (75/105)   Writing objects:  72% (76/105)   Writing objects:  73% (77/105)   Writing objects:  74% (78/105)   Writing objects:  75% (79/105)   Writing objects:  76% (80/105)   Writing objects:  77% (81/105)   Writing objects:  78% (82/105)   Writing objects:  79% (83/105)   Writing objects:  80% (84/105)   Writing objects:  81% (86/105)   Writing objects:  82% (87/105)   Writing objects:  83% (88/105)   Writing objects:  84% (89/105)   Writing objects:  85% (90/105)   Writing objects:  86% (91/105)   Writing objects:  87% (92/105)   Writing objects:  88% (93/105)   Writing objects:  89% (94/105)   Writing objects:  90% (95/105)   Writing objects:  91% (96/105)   Writing objects:  92% (97/105)   Writing objects:  93% (98/105)   Writing objects:  94% (99/105)   Writing objects:  95% (100/105)   Writing objects:  96% (101/105)   Writing objects:  97% (102/105)   Writing objects:  98% (103/105)   Writing objects:  99% (104/105)   Writing objects: 100% (105/105)   Writing objects: 100% (105/105), 253.66 KiB | 0 bytes/s, done.
+Total 105 (delta 27), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/27)   [Kremote: Resolving deltas:   3% (1/27)   [Kremote: Resolving deltas:  14% (4/27)   [Kremote: Resolving deltas:  18% (5/27)   [Kremote: Resolving deltas:  22% (6/27)   [Kremote: Resolving deltas:  29% (8/27)   [Kremote: Resolving deltas:  33% (9/27)   [Kremote: Resolving deltas:  37% (10/27)   [Kremote: Resolving deltas:  40% (11/27)   [Kremote: Resolving deltas:  44% (12/27)   [Kremote: Resolving deltas:  48% (13/27)   [Kremote: Resolving deltas:  51% (14/27)   [Kremote: Resolving deltas:  55% (15/27)   [Kremote: Resolving deltas:  59% (16/27)   [Kremote: Resolving deltas:  62% (17/27)   [Kremote: Resolving deltas:  66% (18/27)   [Kremote: Resolving deltas:  70% (19/27)   [Kremote: Resolving deltas:  74% (20/27)   [Kremote: Resolving deltas:  77% (21/27)   [Kremote: Resolving deltas:  81% (22/27)   [Kremote: Resolving deltas:  85% (23/27)   [Kremote: Resolving deltas:  88% (24/27)   [Kremote: Resolving deltas:  92% (25/27)   [Kremote: Resolving deltas:  96% (26/27)   [Kremote: Resolving deltas: 100% (27/27)   [Kremote: Resolving deltas: 100% (27/27), completed with 18 local objects.[K
+To git@github.com:nstrayer/network3d.git
+   b915193..8021cd1  master -> master
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ [K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "totally got rid of the ugly floating constants object and replaced it with indivieu[K[K[Kiduakl s[K[K[K[K[Kl=[K[Kal settings and compartmentalioz[K[K[Kized settings obj ects for the camera and controls"

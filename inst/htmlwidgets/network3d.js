@@ -2615,7 +2615,7 @@ module.exports = function generatePointPositions(nodes){
 };
 
 },{}],6:[function(require,module,exports){
-module.exports = function generatePointStaticAttrs(nodes, constants){
+module.exports = function generatePointStaticAttrs(nodes, default_size){
   const num_points = nodes.length,
         color = new THREE.Color(),
         point_colors = new Float32Array(num_points*3),
@@ -2631,7 +2631,7 @@ module.exports = function generatePointStaticAttrs(nodes, constants){
     point_colors[i*3 + 2] = b;
 
     // and sizes...
-    point_sizes[i] = vertex.hub? constants.sizes.hub_size: constants.sizes.point_size;
+    point_sizes[i] = vertex.size || default_size;
   }
   return {colors: point_colors, sizes: point_sizes};
 };
@@ -2693,61 +2693,14 @@ class phewasNetwork{
     this.width = width;
     this.height = height;
 
-    this.constants = {
-      colors: {                    // Colors of chart
-        background: 'white',        // background of the chart
-        edge: 0xbababa,             // edges between nodes
-      },
-      sizes: {                     // Sizes of chart components (graph spans cube from -1 to 1)
-        point_size: 0.1,            // Normal node diameter
-        hub_size: 0.3,              // Hub diameter
-        selection_size_mult: 1.5,   // How much nodes grow when selected
-        edge_width: 0.008,          // Thickness of lines connecting nodes
-      },
-      camera: {                   // Camera settings
-        setup: {                   // Initializations
-          fov: 65,                  // Field of view
-          aspect: width/height,     // Aspect ratio of view
-          near: 0.1,                // object will get clipped if they are closer than 1 world unit
-          far: 100,                 // and will fade away if they are further than 1000 units away
-        },
-        start_pos: { x: 1.2, y: 1.2, z: 2 }, // 3d position of camera on load
-        center: { x: 0.5, y: 0.5, z: 0.5 }   // position around which the camera rotates.
-      },
-      controls: {                // Controls
-        enableDamping:true,       // For that slippery Feeling
-        dampingFactor:0.12,       // Needs to call update on render loop
-        rotateSpeed:0.08,         // Rotate speed
-        panSpeed: 0.05,           // How fast panning happens
-        autoRotate:false,          // turn this guy to true for a spinning camera
-        autoRotateSpeed:0.2,      // how fast should it spin
-        mouseButtons: {           // Button controls for controlling.
-          ORBIT: THREE.MOUSE.RIGHT,
-          ZOOM: THREE.MOUSE.MIDDLE,
-          PAN: THREE.MOUSE.LEFT
-        },
-      },
-      misc: {                    // Other settings
-        node_outline_black: true, // Outline the node circles in black? Default is white
-        background_color: 'white',// Color of background
-        raycast_res: 0.05,         // Thickness of invisible raycasting selection beam
-        edge_color: 0xbababa,     // edges between nodes
-        edge_opacity: 0.1,        // How transparent should our node connections be
-        interactive: true,        // Turn off all interactivity with the network?
-        tooltip_offset: 20,       // Tooltip that shows whatever's in the 'name' field should be offset by how much?
-        select_all: true,        // do we show tooltip for every node or just the 'hub' nodes?
-        max_iterations: 250,      // Number of iterations the layout simulation runs
-        manybody_strength: -1,    // Attractive force between nodes irrespective of links
-        link_strength: null,      // attractive force of links. Falsy values default to a function of number of connections.
-        show_simulation_progress: true, // show small popup while layout is being calculated?
-      }
-    };
+
     this.manybody_strength = -1;
-    this.static_length_strength = true;
     this.link_strength = 1;
+    this.static_length_strength = true;
 
     // setup vector for holding mouse position for raycaster
     this.mouse = new THREE.Vector2(100, 100);
+
     // also keep track of the raw positition for placing tooltip.
     this.mouseRaw = {x:0, y:0};
     this.currentlySelected = null; // Keep track of what node is selected.
@@ -2881,47 +2834,45 @@ class phewasNetwork{
     color_attributes[index*3]     = toProp(brighter.r);
     color_attributes[index*3 + 1] = toProp(brighter.g);
     color_attributes[index*3 + 2] = toProp(brighter.b);
-    size_attributes[index]  = this.nodeSizes[index]*this.constants.sizes.selection_size_mult;
+    size_attributes[index]  = this.nodeSizes[index]*this.selection_size_mult;
 
     this.node_mesh.geometry.attributes.color.needsUpdate = true;
     this.node_mesh.geometry.attributes.size.needsUpdate = true;
   }
 
   // function called to kick off visualization with data.
-  addData({data, settings}){
+  //addData({data, settings, user_camera_settings, user_control_settings}){
+  addData(x){
 
     // check if we've already got a scene going
     if(this.node_mesh) this.resetViz();
 
     // extract node and link data
-    this.nodes = data.vertices.map(d => ({
-      id: d.id,
-      name: d.name || null,
-      color: d.color,
-    }));
+    this.nodes = x.data.vertices;
+    this.links = x.data.edges;
 
-    this.links = data.edges;
-
-    // Overwrite default constants if R supplies new ones.
-    for(let section in this.constants){
-      Object.assign(this.constants[section], settings[section]);
-    }
-
-    this.max_iterations = this.constants.misc.max_iterations;
+    // Assign some helpful constants for other methods to use.
+    this.interactive = x.interactive;
+    this.select_all = x.select_all;
+    this.selection_size_mult = x.selection_size_mult;
+    this.show_simulation_progress = x.show_simulation_progress;
+    this.max_iterations = x.max_iterations;
+    this.manybody_strength = x.manybody_strength;
+    this.link_strength = x.link_strength;
 
     // Setup tooltip offset
-    this.tooltip.setOffset(this.constants.misc.tooltip_offset);
+    this.tooltip.setOffset(x.tooltip_offset);
 
     // Initialize a color and size vectors once as they are (relatively) static.
-    const {colors: nodeColors, sizes: nodeSizes} = generatePointStaticAttrs(this.nodes, this.constants);
+    const {colors: nodeColors, sizes: nodeSizes} = generatePointStaticAttrs(this.nodes, x.node_size);
     this.nodeColors = nodeColors;
     this.nodeSizes = nodeSizes;
 
     // initialize our simulation object and perform one iteration to get link data in proper form
     this.simulation = setupSimulation(
       this.nodes, this.links,
-      this.constants.misc.manybody_strength,
-      this.constants.misc.link_strength
+      this.manybody_strength,
+      this.link_strength
     );
 
     // Building the visualization
@@ -2930,9 +2881,9 @@ class phewasNetwork{
     this.link_mesh = buildEdges({
       nodes: this.nodes,
       links: this.links,
-      color: this.constants.misc.edge_color,
-      opacity: this.constants.misc.edge_opacity,
-      width: this.constants.misc.edge_width,
+      color: x.edge_color,
+      opacity: x.edge_opacity,
+      width: x.edge_width,
     });
 
     // --------------------------------------------------------------
@@ -2941,27 +2892,27 @@ class phewasNetwork{
       nodes: this.nodes,
       nodeColors: this.nodeColors,
       nodeSizes: this.nodeSizes,
-      blackOutline: this.constants.misc.node_outline_black
+      blackOutline: x.node_outline_black
     });
 
     // --------------------------------------------------------------
     // Initialize the 'scene' and add our geometries we just made
-    this.scene = setupScene(this.node_mesh, this.link_mesh, this.color.set(this.constants.misc.background_color));
+    this.scene = setupScene(this.node_mesh, this.link_mesh, this.color.set(x.background_color));
 
     // --------------------------------------------------------------
     // Setup camera to actually see our scene. Point it at middle of network
-    this.camera = setupCamera(this.constants.camera);
+    this.camera = setupCamera(x.user_camera_settings, this.width, this.height);
 
     // --------------------------------------------------------------
     // Raycaster for selecting points.
-    this.raycaster = setupRaycaster(this.constants.misc.raycast_res);
+    this.raycaster = setupRaycaster(x.raycast_res);
 
     // setup a mousemove event to keep track of mouse position for raycaster.
     this.canvas.addEventListener( 'mousemove', this.onMouseOver.bind(this), false );
 
     // --------------------------------------------------------------
     // Attach some controls to our camera and renderer
-    this.controls = setupControls(this.camera, this.renderer, this.constants.controls);
+    this.controls = setupControls(this.camera, this.renderer, x.user_control_settings);
 
     // --------------------------------------------------------------
     // Run the renderer!
@@ -2996,7 +2947,7 @@ class phewasNetwork{
       this.iteration += 1;
 
       // does the user want a progress message
-      if(this.constants.misc.show_simulation_progress){
+      if(this.show_simulation_progress){
         // if this is our last iteration we should hide the progress
         if(this.iteration === this.max_iterations){
          this.simulation_progress.hide();
@@ -3007,7 +2958,8 @@ class phewasNetwork{
       }
     }
 
-    if(this.constants.misc.interactive){
+
+    if(this.interactive){
         // update our raycaster with current mouse position
       this.raycaster.setFromCamera(this.mouse, this.camera);
 
@@ -3019,7 +2971,7 @@ class phewasNetwork{
         // find all nodes intersected that the user want's selected
         const intersectedNodes = intersects
           .map(d => Object.assign({},this.nodes[d.index], {node_index: d.index}))
-          .filter(d => d.selectable || this.constants.misc.select_all);
+          .filter(d => d.selectable || this.select_all);
 
         const applicablePointsSelected = intersectedNodes.length !== 0;
 
@@ -3102,14 +3054,29 @@ class ProgressMessage {
 module.exports = ProgressMessage;
 
 },{}],10:[function(require,module,exports){
+const default_settings = {
+  setup: {                   // Initializations
+      fov: 65,                  // Field of view
+      near: 0.1,                // object will get clipped if they are closer than 1 world unit
+      far: 100,                 // and will fade away if they are further than 1000 units away
+    },
+    start_pos: { x: 1.2, y: 1.2, z: 2 }, // 3d position of camera on load
+    center: { x: 0.5, y: 0.5, z: 0.5 }   // position around which the camera rotates.
+};
+
 // sets up camera with supplied constants.
-module.exports = function setupCamera(settings){
+module.exports = function setupCamera(user_settings, width, height){
   const camera = new THREE.PerspectiveCamera();
+
+  // overwrite the default settings with whatever the user has provided in addition.
+  const settings = Object.assign({}, default_settings, user_settings);
 
   // setup camera with constants
   for(let setting in settings.setup){
     camera[setting] = settings.setup[setting];
   }
+  camera.aspect = width/height;
+
   // update projection matrix to apply changes in settings
   camera.updateProjectionMatrix();
 
@@ -3125,12 +3092,29 @@ module.exports = function setupCamera(settings){
 };
 
 },{}],11:[function(require,module,exports){
+const default_settings = {
+  enableDamping:true,       // For that slippery Feeling
+  dampingFactor:0.12,       // Needs to call update on render loop
+  rotateSpeed:0.08,         // Rotate speed
+  panSpeed: 0.05,           // How fast panning happens
+  autoRotate:false,          // turn this guy to true for a spinning camera
+  autoRotateSpeed:0.2,      // how fast should it spin
+  mouseButtons: {           // Button controls for controlling.
+    ORBIT: THREE.MOUSE.RIGHT,
+    ZOOM: THREE.MOUSE.MIDDLE,
+    PAN: THREE.MOUSE.LEFT
+  }
+};
+
 module.exports = function setupControls(camera, renderer, camera_settings){
+  // overwrite the default settings with whatever the user has provided in addition.
+  const settings = Object.assign({},default_settings, camera_settings);
+
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   // assign settings to controls
-  for(let setting in camera_settings){
-    controls[setting] = camera_settings[setting];
+  for(let setting in settings){
+    controls[setting] = settings[setting];
   }
 
   // target center of world for controls orbit point. (this gets updated with center of mesh later)
@@ -3263,13 +3247,35 @@ HTMLWidgets.widget({
         link_static.onFinishChange(updateSim);
         num_iterations.onFinishChange(updateSim);
 
-        const data = {
-          edges: HTMLWidgets.dataframeToD3(x.data.edges),
-          vertices: HTMLWidgets.dataframeToD3(x.data.vertices),
-        };
+        x.data.edges = HTMLWidgets.dataframeToD3(x.data.edges);
+        x.data.vertices = HTMLWidgets.dataframeToD3(x.data.vertices);
 
-        plot.addData({data, settings:x.settings});
+        //const data = {
+        //  edges: HTMLWidgets.dataframeToD3(x.data.edges),
+        //  vertices: HTMLWidgets.dataframeToD3(x.data.vertices),
+        //};
 
+        //const {settings, user_camera_settings, user_control_settings} = x;
+        //
+        //const {
+        //  data,
+        //  user_camera_settings,
+        //  user_control_settings,
+        //  node_outline_black,
+        //  background_color,
+        //  node_size,
+        //  raycast_res,
+        //  edge_color,
+        //  edge_opacity,
+        //  interactive,
+        //  selection_size_mult,
+        //  select_all,
+        //  show_simulation_progress,
+        //  max_iterations,
+        //  force_strength } = x
+
+        //plot.addData({data, settings, user_camera_settings, user_control_settings});
+        plot.addData(x);
         console.log('rendering!');
 
       },

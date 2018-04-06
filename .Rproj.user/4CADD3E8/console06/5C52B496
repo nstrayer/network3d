@@ -202,3 +202,5 @@ Error: Cannot find module '../BuildNodes.js' from '/home/nick/fast_bind/network3
 Error: Cannot find module '../BuildNodes.js' from '/home/nick/fast_bind/network3d/inst/htmlwidgets/src'
 Error: Parsing file /home/nick/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js: Unexpected token (118:24)
 Error: Parsing file /home/nick/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js: Unexpected token (182:48)
+Error: Parsing file /home/nick/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js: Unexpected token (62:8)
+Error: Parsing file /home/nick/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js: Unexpected token (62:8)

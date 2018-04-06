@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523034577055.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6AE7926E",
+    "lastKnownWriteTime" : 1523034748,
+    "last_content_update" : 1523034748791,
+    "path" : "~/fast_bind/network3d/inst/htmlwidgets/src/GeneratePointStaticAttrs.js",
+    "project_path" : "inst/htmlwidgets/src/GeneratePointStaticAttrs.js",
+    "properties" : {
+        "cursorPosition" : "17,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "js"
+}

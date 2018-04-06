@@ -28,13 +28,35 @@ HTMLWidgets.widget({
         link_static.onFinishChange(updateSim);
         num_iterations.onFinishChange(updateSim);
 
-        const data = {
-          edges: HTMLWidgets.dataframeToD3(x.data.edges),
-          vertices: HTMLWidgets.dataframeToD3(x.data.vertices),
-        };
+        x.data.edges = HTMLWidgets.dataframeToD3(x.data.edges);
+        x.data.vertices = HTMLWidgets.dataframeToD3(x.data.vertices);
 
-        plot.addData({data, settings:x.settings});
+        //const data = {
+        //  edges: HTMLWidgets.dataframeToD3(x.data.edges),
+        //  vertices: HTMLWidgets.dataframeToD3(x.data.vertices),
+        //};
 
+        //const {settings, user_camera_settings, user_control_settings} = x;
+        //
+        //const {
+        //  data,
+        //  user_camera_settings,
+        //  user_control_settings,
+        //  node_outline_black,
+        //  background_color,
+        //  node_size,
+        //  raycast_res,
+        //  edge_color,
+        //  edge_opacity,
+        //  interactive,
+        //  selection_size_mult,
+        //  select_all,
+        //  show_simulation_progress,
+        //  max_iterations,
+        //  force_strength } = x
+
+        //plot.addData({data, settings, user_camera_settings, user_control_settings});
+        plot.addData(x);
         console.log('rendering!');
 
       },

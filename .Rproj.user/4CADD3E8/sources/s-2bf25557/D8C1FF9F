@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523029018416.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D8C1FF9F",
+    "lastKnownWriteTime" : 1523029576,
+    "last_content_update" : 1523029576256,
+    "path" : "~/fast_bind/network3d/inst/htmlwidgets/src/SetupControls.js",
+    "project_path" : "inst/htmlwidgets/src/SetupControls.js",
+    "properties" : {
+        "cursorPosition" : "15,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "js"
+}
