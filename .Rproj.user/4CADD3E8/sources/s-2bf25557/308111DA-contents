@@ -1,6 +1,8 @@
-#' <Add Title>
+#' network3d
 #'
-#' <Add Description>
+#' Render a 3d network visualization in an htmlwidget. Calculates the layout simulation within javascript and is fast and lightweight.
+#' @param vertices Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'name' column for text of mouseover tooltip, and 'interactive' boolean column for if the node can be interacted with or not.
+#' @param edges Dataframe with two columns: 'source' or the id of the node edge is coming from, and 'target' or id of node edge is going to.
 #' @param node_outline_black Outline the node circles in black? Default (FALSE) is white.
 #' @param background_color Color of background of plot. Any css valid color will work.
 #' @param node_size How big should the nodes be? Relative to world size of 2x2x2. Note that this is overwritten if the vertices dataframe has a size column.
@@ -21,9 +23,30 @@
 #'
 #' @import htmlwidgets
 #'
+#' @examples
+#'
+#' # Basic use with a custom number of simulation iterations
+#' network3d::network3d(data, max_iterations = 75)
+#'
+#' # Spins up explorer to fiddle with simulation parameters
+#' network3d::network3d(data, max_iterations = 75, manybody_strength = 1, force_explorer = TRUE)
+#'
+#' # Custom force parameters
+#' network3d::network3d(data, max_iterations = 75, manybody_strength = 1)
+#'
+#' # Custom camera settings: sets camera way far away from graph.
+#' network3d::network3d(
+#'   data,
+#'   camera = list(
+#'     start_pos = list(x=1.2, y=1.2, z=20)
+#'   ),
+#'   max_iterations = 75
+#' )
+#'
 #' @export
 network3d <- function(
-  data,
+  vertices,
+  edges,
   camera = list(),
   controls = list(),
   node_outline_black = TRUE,
@@ -41,12 +64,12 @@ network3d <- function(
   manybody_strength = -1,
   link_strength = NULL,
   static_length_strength = FALSE,
-  force_explorer = TRUE,
+  force_explorer = FALSE,
   width = NULL, height = NULL, elementId = NULL) {
 
   # forward options using x
   x = list(
-    data = data,
+    data = list(vertices = vertices, edges = edges),
     user_camera_settings = camera,
     user_control_settings = controls,
     node_outline_black = node_outline_black,

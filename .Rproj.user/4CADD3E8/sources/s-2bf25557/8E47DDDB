@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "8E47DDDB",
-    "lastKnownWriteTime" : 1523035648,
-    "last_content_update" : 1523044768247,
+    "lastKnownWriteTime" : 1523045908,
+    "last_content_update" : 1523046614872,
     "path" : "~/fast_bind/network3d/build_and_run.R",
     "project_path" : "build_and_run.R",
     "properties" : {
-        "cursorPosition" : "30,0",
-        "scrollLine" : "13"
+        "cursorPosition" : "38,17",
+        "scrollLine" : "11"
     },
     "relative_order" : 3,
     "source_on_save" : false,

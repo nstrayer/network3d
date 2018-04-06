@@ -4,7 +4,6 @@ library(tidyverse)
 collabs <- read_tsv('data/ca-GrQc.txt', skip = 4, col_names = c('source', 'target'))
 
 makeNetworkData <- function(size = 500, random_sizes = FALSE){
-
   vertices <- data_frame(id = unique(collabs$source)) %>%
     mutate(index = 1:n(), color = 'steelblue', name = as.character(index)) %>%
     head(size)
@@ -24,10 +23,15 @@ makeNetworkData <- function(size = 500, random_sizes = FALSE){
 
 
 data <- makeNetworkData(2000)
+edges = data$edges
+vertices
 data_sized_verts <- makeNetworkData(2000, TRUE)
 
+devtools::document()
 devtools::install()
-network3d::network3d(data, max_iterations = 75)
+
+network3d::network3d(vertices = data$vertices, edges = data$edges, max_iterations = 75)
+# network3d::network3d(data, max_iterations = 75, manybody_strength = 1, force_explorer = FALSE)
 
 # network3d::network3d(data_sized_verts, max_iterations = 75)
 
