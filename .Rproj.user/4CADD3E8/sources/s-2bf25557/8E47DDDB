@@ -12,8 +12,8 @@
     "path" : "~/fast_bind/network3d/build_and_run.R",
     "project_path" : "build_and_run.R",
     "properties" : {
-        "cursorPosition" : "19,23",
-        "scrollLine" : "0"
+        "cursorPosition" : "32,0",
+        "scrollLine" : "14"
     },
     "relative_order" : 3,
     "source_on_save" : false,

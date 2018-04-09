@@ -259,3 +259,72 @@ drwxr-xr-x  2 nick nick 4.0K Apr  5 11:58 [01;34mR[0m
 -rw-r--r--  1 nick nick  743 Apr  6 15:05 README.md
 drwxr-xr-x  4 nick nick 4.0K Apr  5 10:36 [01;34m.Rproj.user[0m
 ]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "added a dataset to the package"
+[master e729eb6] added a dataset to the package
+ 73 files changed, 92 insertions(+), 3194 deletions(-)
+ rewrite .Rproj.user/4CADD3E8/console06/INDEX001 (93%)
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/107362CE-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/1123F238-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/13B6548A-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/16290A0-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/1E838AA3-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/23F3B3BF-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/24D75053-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/29309C5A-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/2DEFD19F-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/30B9CD03-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/37F62576-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/3A405C51-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/3EF7E8A2-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/40144114-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/4458B9F2-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/465E2602-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/4D036C75-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/4DA3C77E-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/522E412A-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/585DC482-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/5E94A3B4-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/6334B1C0-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/658EA6F4-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/672B1595-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/6902483B-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/72C21DA8-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/8182A78B-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/81AB42EB-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/8412C235-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/845ACA08-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/85C91BF0-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/86C682A5-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/87E056C7-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/8B761DA0-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/8CC13E2A-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/8CDC35C7-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/90426CE1-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/9422989F-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/946DDC34-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/9ACC8FE0-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/9FAE240D-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/AA5BE1B1-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/AF45DD69-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/B12392F1-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/B416BFFE-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/D339338A-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/D90D4300-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/DC73A51F-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/E13564C8-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/E208FFC6-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/E607A847-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/EE0593DB-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/F1C33477-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/F5EEB1B4-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/F7832A1A-contents
+ delete mode 100644 .Rproj.user/4CADD3E8/sources/s-2bf25557/FA7E7C9-contents
+ create mode 100644 data/collaboration_networks.rda
+Counting objects: 29, done.
+Delta compression using up to 8 threads.
+Compressing objects:   3% (1/27)   Compressing objects:   7% (2/27)   Compressing objects:  11% (3/27)   Compressing objects:  14% (4/27)   Compressing objects:  18% (5/27)   Compressing objects:  22% (6/27)   Compressing objects:  25% (7/27)   Compressing objects:  29% (8/27)   Compressing objects:  33% (9/27)   Compressing objects:  37% (10/27)   Compressing objects:  40% (11/27)   Compressing objects:  44% (12/27)   Compressing objects:  48% (13/27)   Compressing objects:  51% (14/27)   Compressing objects:  55% (15/27)   Compressing objects:  59% (16/27)   Compressing objects:  62% (17/27)   Compressing objects:  66% (18/27)   Compressing objects:  70% (19/27)   Compressing objects:  74% (20/27)   Compressing objects:  77% (21/27)   Compressing objects:  81% (22/27)   Compressing objects:  85% (23/27)   Compressing objects:  88% (24/27)   Compressing objects:  92% (25/27)   Compressing objects:  96% (26/27)   Compressing objects: 100% (27/27)   Compressing objects: 100% (27/27), done.
+Writing objects:   3% (1/29)   Writing objects:   6% (2/29)   Writing objects:  10% (3/29)   Writing objects:  13% (4/29)   Writing objects:  17% (5/29)   Writing objects:  20% (6/29)   Writing objects:  24% (7/29)   Writing objects:  27% (8/29)   Writing objects:  31% (9/29)   Writing objects:  34% (10/29)   Writing objects:  37% (11/29)   Writing objects:  41% (12/29)   Writing objects:  44% (13/29)   Writing objects:  48% (14/29)   Writing objects:  51% (15/29)   Writing objects:  55% (16/29)   Writing objects:  58% (17/29)   Writing objects:  62% (18/29)   Writing objects:  65% (19/29)   Writing objects:  68% (20/29)   Writing objects:  72% (21/29)   Writing objects:  75% (22/29)   Writing objects:  79% (23/29)   Writing objects:  82% (24/29)   Writing objects:  86% (25/29)   Writing objects:  89% (26/29)   Writing objects:  93% (27/29)   Writing objects:  96% (28/29)   Writing objects: 100% (29/29)   Writing objects: 100% (29/29), 16.10 KiB | 0 bytes/s, done.
+Total 29 (delta 17), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/17)   [Kremote: Resolving deltas:   5% (1/17)   [Kremote: Resolving deltas:  11% (2/17)   [Kremote: Resolving deltas:  17% (3/17)   [Kremote: Resolving deltas:  23% (4/17)   [Kremote: Resolving deltas:  29% (5/17)   [Kremote: Resolving deltas:  35% (6/17)   [Kremote: Resolving deltas:  41% (7/17)   [Kremote: Resolving deltas:  47% (8/17)   [Kremote: Resolving deltas:  52% (9/17)   [Kremote: Resolving deltas:  58% (10/17)   [Kremote: Resolving deltas:  64% (11/17)   [Kremote: Resolving deltas:  70% (12/17)   [Kremote: Resolving deltas:  76% (13/17)   [Kremote: Resolving deltas:  82% (14/17)   [Kremote: Resolving deltas:  88% (15/17)   [Kremote: Resolving deltas:  94% (16/17)   [Kremote: Resolving deltas: 100% (17/17)   [Kremote: Resolving deltas: 100% (17/17), completed with 17 local objects.[K
+To git@github.com:nstrayer/network3d.git
+   8d8e650..e729eb6  master -> master
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "added a dataset to the package"
