@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "20499BC7",
-    "lastKnownWriteTime" : 1523044712,
-    "last_content_update" : 1523044712335,
+    "lastKnownWriteTime" : 1523289399,
+    "last_content_update" : 1523289399301,
     "path" : "~/fast_bind/network3d/inst/htmlwidgets/src/main.js",
     "project_path" : "inst/htmlwidgets/src/main.js",
     "properties" : {
-        "cursorPosition" : "17,0",
-        "scrollLine" : "0"
+        "cursorPosition" : "23,39",
+        "scrollLine" : "2"
     },
     "relative_order" : 5,
     "source_on_save" : false,

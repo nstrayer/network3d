@@ -339,3 +339,51 @@ remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7) 
 To git@github.com:nstrayer/network3d.git
    e729eb6..e5808c1  master -> master
 git "took away the color and id [K[K[Kindex column from the ind[Kl[Kcluded data"
+[master c70cfd7] took away the color and index column from the included data
+ 10 files changed, 36 insertions(+), 18 deletions(-)
+ rewrite .Rproj.user/4CADD3E8/console06/INDEX001 (92%)
+ rewrite data/collaboration_networks.rda (99%)
+Counting objects: 19, done.
+Delta compression using up to 8 threads.
+Compressing objects:   5% (1/18)   Compressing objects:  11% (2/18)   Compressing objects:  16% (3/18)   Compressing objects:  22% (4/18)   Compressing objects:  27% (5/18)   Compressing objects:  33% (6/18)   Compressing objects:  38% (7/18)   Compressing objects:  44% (8/18)   Compressing objects:  50% (9/18)   Compressing objects:  55% (10/18)   Compressing objects:  61% (11/18)   Compressing objects:  66% (12/18)   Compressing objects:  72% (13/18)   Compressing objects:  77% (14/18)   Compressing objects:  83% (15/18)   Compressing objects:  88% (16/18)   Compressing objects:  94% (17/18)   Compressing objects: 100% (18/18)   Compressing objects: 100% (18/18), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 12.60 KiB | 0 bytes/s, done.
+Total 19 (delta 12), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/12)   [Kremote: Resolving deltas:   8% (1/12)   [Kremote: Resolving deltas:  16% (2/12)   [Kremote: Resolving deltas:  25% (3/12)   [Kremote: Resolving deltas:  33% (4/12)   [Kremote: Resolving deltas:  41% (5/12)   [Kremote: Resolving deltas:  50% (6/12)   [Kremote: Resolving deltas:  58% (7/12)   [Kremote: Resolving deltas:  66% (8/12)   [Kremote: Resolving deltas:  75% (9/12)   [Kremote: Resolving deltas:  83% (10/12)   [Kremote: Resolving deltas:  91% (11/12)   [Kremote: Resolving deltas: 100% (12/12)   [Kremote: Resolving deltas: 100% (12/12), completed with 12 local objects.[K
+To git@github.com:nstrayer/network3d.git
+   e5808c1..c70cfd7  master -> master
+cd inst/htmlwidgets/s[K
+lib/          node_modules/ src/          
+]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ cd inst/htmlwidgets/
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ ls
+total 212K
+drwxr-xr-x   5 nick nick 4.0K Apr  5 16:07 [0m[01;34m.[0m
+drwxr-xr-x   3 nick nick 4.0K Apr  5 10:36 [01;34m..[0m
+drwxr-xr-x   2 nick nick 4.0K Apr  5 10:37 [01;34mlib[0m
+-rw-r--r--   1 nick nick 111K Apr  6 15:35 network3d.js
+-rw-r--r--   1 nick nick  254 Apr  5 10:38 network3d.yaml
+drwxr-xr-x 176 nick nick 4.0K Apr  5 16:07 [01;34mnode_modules[0m
+-rw-r--r--   1 nick nick  18K Apr  5 11:44 oldNetworkJS.js
+-rw-r--r--   1 nick nick  465 Apr  5 16:07 package.json
+-rw-r--r--   1 nick nick  52K Apr  5 16:07 package-lock.json
+drwxr-xr-x   2 nick nick 4.0K Apr  6 13:44 [01;34msrc[0m
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ npm run watch
+
+> htmlwidgets@1.0.0 watch /home/nick/fast_bind/network3d/inst/htmlwidgets
+> watchify src/main.js -o network3d.js
+
+^C
+
+[33m
+   ╭─────────────────────────────────────╮[39m
+   [33m│[39m                                     [33m│[39m
+   [33m│[39m   Update available [2m5.5.1[22m[0m → [0m[32m5.8.0[39m    [33m│[39m
+   [33m│[39m     Run [36mnpm i -g npm[39m to update      [33m│[39m
+   [33m│[39m                                     [33m│[39m
+[33m   ╰─────────────────────────────────────╯
+[39m
+
+
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ l[Kcd ..
+]0;/home/nick/fast_bind/network3d/inst]0;nick@compooper: ~/fast_bind/network3d/inst[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst[00m$ cd ..
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ vim .gitignore 
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "fixed the position of the gui div and also the progress one"

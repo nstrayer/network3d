@@ -3060,6 +3060,8 @@ module.exports = phewasNetwork;
 },{"./BuildEdges.js":2,"./BuildNodes.js":3,"./CalcConnectionCounts.js":4,"./GenerateEdgePositions.js":5,"./GeneratePointPositions.js":6,"./GeneratePointStaticAttrs.js":7,"./MakeLinkNodeStrengths.js":8,"./ProgressMessage.js":11,"./SetupCamera.js":12,"./SetupControls.js":13,"./SetupRaycaster.js":14,"./SetupRenderer.js":15,"./SetupScene.js":16,"./SetupSimulation.js":17,"./Tooltip.js":18}],11:[function(require,module,exports){
 class ProgressMessage {
   constructor(el){
+    d3.select(el).style('position', 'relative'); // this is needed so the other div knows where to go relative to the parent widget div.
+
     this.message = d3.select(el)
       .append('div')
       .html('<p> Calculating layout: step 0</p>')
@@ -3067,7 +3069,7 @@ class ProgressMessage {
       .style('border-radius', '10px')
       .style('padding', '0px 15px')
       .style('box-shadow', '1px 1px 3px black')
-      .style('position', 'fixed');
+      .style('position', 'absolute');
 
     // hide until the user has said they want message
     this.hide();
@@ -3273,7 +3275,17 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         if(x.force_explorer){
-          const gui = new dat.GUI();
+          const gui_container = d3.select(el)
+          .append('div')
+          .attr('id', 'gui-container')
+          .style('position', 'absolute')
+          .style('top', '10px')
+          .style('left', `${width - 255}px`);
+
+          const gui = new dat.GUI({ autoPlace: false } );
+
+          document.getElementById('gui-container').appendChild(gui.domElement);
+
           const node_strength  = gui.add(plot, 'manybody_strength', -10,10);
           const link_static    = gui.add(plot, 'static_length_strength');
           const link_strength  = gui.add(plot, 'link_strength', 0, 5);

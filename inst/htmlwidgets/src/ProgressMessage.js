@@ -1,5 +1,7 @@
 class ProgressMessage {
   constructor(el){
+    d3.select(el).style('position', 'relative'); // this is needed so the other div knows where to go relative to the parent widget div.
+
     this.message = d3.select(el)
       .append('div')
       .html('<p> Calculating layout: step 0</p>')
@@ -7,7 +9,7 @@ class ProgressMessage {
       .style('border-radius', '10px')
       .style('padding', '0px 15px')
       .style('box-shadow', '1px 1px 3px black')
-      .style('position', 'fixed');
+      .style('position', 'absolute');
 
     // hide until the user has said they want message
     this.hide();

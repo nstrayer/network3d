@@ -16,7 +16,17 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         if(x.force_explorer){
-          const gui = new dat.GUI();
+          const gui_container = d3.select(el)
+          .append('div')
+          .attr('id', 'gui-container')
+          .style('position', 'absolute')
+          .style('top', '10px')
+          .style('left', `${width - 255}px`);
+
+          const gui = new dat.GUI({ autoPlace: false } );
+
+          document.getElementById('gui-container').appendChild(gui.domElement);
+
           const node_strength  = gui.add(plot, 'manybody_strength', -10,10);
           const link_static    = gui.add(plot, 'static_length_strength');
           const link_strength  = gui.add(plot, 'link_strength', 0, 5);
