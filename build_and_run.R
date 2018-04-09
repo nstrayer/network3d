@@ -22,8 +22,11 @@ makeNetworkData <- function(size = 500, random_sizes = FALSE){
 }
 
 
-data <- makeNetworkData(4000)
-data_sized_verts <- makeNetworkData(2000, TRUE)
+data <- makeNetworkData(1000)
+
+collaboration_networks <- makeNetworkData(1000)
+devtools::use_data(collaboration_networks)
+data_sized_verts <- makeNetworkData(1000, TRUE)
 
 devtools::document()
 
