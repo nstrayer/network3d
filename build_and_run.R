@@ -22,15 +22,18 @@ makeNetworkData <- function(size = 500, random_sizes = FALSE){
 }
 
 
-data <- makeNetworkData(2000)
-edges = data$edges
-vertices
+data <- makeNetworkData(4000)
 data_sized_verts <- makeNetworkData(2000, TRUE)
 
 devtools::document()
-devtools::install()
 
-network3d::network3d(vertices = data$vertices, edges = data$edges, max_iterations = 75)
+devtools::install()
+network3d::network3d(
+  vertices = data$vertices, edges = data$edges,
+  max_iterations = 75,
+  node_size = 0.01,
+  edge_opacity = 0.1,
+  force_explorer = FALSE)
 # network3d::network3d(data, max_iterations = 75, manybody_strength = 1, force_explorer = FALSE)
 
 # network3d::network3d(data_sized_verts, max_iterations = 75)

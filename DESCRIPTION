@@ -1,11 +1,10 @@
 Package: network3d
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Layout and Calculate 3D Network Diagrams
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Nick Strayer
+Maintainer: Nick Strayer <nick.strayer@gmail.com>
+Description: Makes a 3D and interactive network plot that allows for rapid visualization and iteration of network plots.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

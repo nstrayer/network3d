@@ -224,3 +224,38 @@ drwxr-xr-x   2 nick nick 4.0K Apr  6 13:44 [01;34msrc[0m
 > htmlwidgets@1.0.0 watch /home/nick/fast_bind/network3d/inst/htmlwidgets
 > watchify src/main.js -o network3d.js
 
+ls
+total 212K
+drwxr-xr-x   5 nick nick 4.0K Apr  5 16:07 [0m[01;34m.[0m
+drwxr-xr-x   3 nick nick 4.0K Apr  5 10:36 [01;34m..[0m
+drwxr-xr-x   2 nick nick 4.0K Apr  5 10:37 [01;34mlib[0m
+-rw-r--r--   1 nick nick 111K Apr  6 15:35 network3d.js
+-rw-r--r--   1 nick nick  254 Apr  5 10:38 network3d.yaml
+drwxr-xr-x 176 nick nick 4.0K Apr  5 16:07 [01;34mnode_modules[0m
+-rw-r--r--   1 nick nick  18K Apr  5 11:44 oldNetworkJS.js
+-rw-r--r--   1 nick nick  465 Apr  5 16:07 package.json
+-rw-r--r--   1 nick nick  52K Apr  5 16:07 package-lock.json
+drwxr-xr-x   2 nick nick 4.0K Apr  6 13:44 [01;34msrc[0m
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ cd ..
+]0;/home/nick/fast_bind/network3d/inst]0;nick@compooper: ~/fast_bind/network3d/inst[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst[00m$ cd 
+]0;/home/nick]0;nick@compooper: ~[01;32mnick@compooper[00m:[01;34m~[00m$ cd fast_bind/b[Kne
+network3d/           neural_net_lectures/ 
+]0;nick@compooper: ~[01;32mnick@compooper[00m:[01;34m~[00m$ cd fast_bind/nee[Ktwork3d/
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ s[Kls
+total 60K
+drwxr-xr-x  8 nick nick 4.0K Apr  9 09:24 [0m[01;34m.[0m
+drwx------ 28 nick nick 4.0K Apr  5 10:36 [01;34m..[0m
+-rw-r--r--  1 nick nick 1.2K Apr  9 08:57 build_and_run.R
+drwxr-xr-x  2 nick nick 4.0K Apr  9 09:26 [01;34mdata[0m
+-rw-r--r--  1 nick nick  373 Apr  9 09:29 DESCRIPTION
+drwxr-xr-x  8 nick nick 4.0K Apr  9 09:29 [01;34m.git[0m
+-rw-r--r--  1 nick nick   21 Apr  6 15:12 .gitignore
+drwxr-xr-x  3 nick nick 4.0K Apr  5 10:36 [01;34minst[0m
+drwxr-xr-x  2 nick nick 4.0K Apr  6 15:02 [01;34mman[0m
+-rw-r--r--  1 nick nick  132 Apr  6 15:11 NAMESPACE
+-rw-r--r--  1 nick nick  356 Apr  9 09:24 network3d.Rproj
+drwxr-xr-x  2 nick nick 4.0K Apr  5 11:58 [01;34mR[0m
+-rw-r--r--  1 nick nick   28 Apr  5 10:36 .Rbuildignore
+-rw-r--r--  1 nick nick  743 Apr  6 15:05 README.md
+drwxr-xr-x  4 nick nick 4.0K Apr  5 10:36 [01;34m.Rproj.user[0m
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "added a dataset to the package"
