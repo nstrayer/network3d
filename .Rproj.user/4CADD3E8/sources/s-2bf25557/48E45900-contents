@@ -63,6 +63,9 @@ class phewasNetwork{
     // append a small div to act as our tooltip
     this.tooltip = new Tooltip(el);
 
+    // do we have a selectable column for finer grain selection of nodes?
+    this.selectable_column = false;
+
     this.simulation_progress = new ProgressMessage(el);
 
     // three color object for generating color vectors
@@ -180,12 +183,14 @@ class phewasNetwork{
     // extract node and link data
     this.nodes = x.data.vertices;
     this.links = x.data.edges;
+
     // build connection count object
     this.connection_counts = calcConnectionCounts(this.links);
 
     // Assign some helpful constants for other methods to use.
     this.interactive = x.interactive;
-    this.select_all = x.select_all;
+    this.selectable_column = Object.keys(this.nodes[0]).includes('selectable');
+
     this.selection_size_mult = x.selection_size_mult;
     this.show_simulation_progress = x.show_simulation_progress;
     this.max_iterations = x.max_iterations;
@@ -268,7 +273,6 @@ class phewasNetwork{
     this.currentlySelected = null;
   }
 
-
   // main render function. This gets called repeatedly
   render(){
     // request animation frame for continued running
@@ -295,9 +299,9 @@ class phewasNetwork{
       }
     }
 
-
+    // if the user has made the plot interactive we can proceed with raycasting logic.
     if(this.interactive){
-        // update our raycaster with current mouse position
+      // update our raycaster with current mouse position
       this.raycaster.setFromCamera(this.mouse, this.camera);
 
       // figure out what points it intersects
@@ -308,7 +312,7 @@ class phewasNetwork{
         // find all nodes intersected that the user want's selected
         const intersectedNodes = intersects
           .map(d => Object.assign({},this.nodes[d.index], {node_index: d.index}))
-          .filter(d => d.selectable || this.select_all);
+          .filter(d => d.selectable || !this.selectable_column);
 
         const applicablePointsSelected = intersectedNodes.length !== 0;
 

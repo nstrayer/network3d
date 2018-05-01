@@ -387,3 +387,47 @@ drwxr-xr-x   2 nick nick 4.0K Apr  6 13:44 [01;34msrc[0m
 ]0;/home/nick/fast_bind/network3d/inst]0;nick@compooper: ~/fast_bind/network3d/inst[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst[00m$ cd ..
 ]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ vim .gitignore 
 ]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "fixed the position of the gui div and also the progress one"
+[master 23b865f] fixed the position of the gui div and also the progress one
+ 21 files changed, 321 insertions(+), 54 deletions(-)
+ rewrite .Rproj.user/4CADD3E8/console06/INDEX001 (92%)
+ create mode 100644 testing_layouts.html
+Counting objects: 33, done.
+Delta compression using up to 8 threads.
+Compressing objects:   3% (1/29)   Compressing objects:   6% (2/29)   Compressing objects:  10% (3/29)   Compressing objects:  13% (4/29)   Compressing objects:  17% (5/29)   Compressing objects:  20% (6/29)   Compressing objects:  24% (7/29)   Compressing objects:  27% (8/29)   Compressing objects:  31% (9/29)   Compressing objects:  34% (10/29)   Compressing objects:  37% (11/29)   Compressing objects:  41% (12/29)   Compressing objects:  44% (13/29)   Compressing objects:  48% (14/29)   Compressing objects:  51% (15/29)   Compressing objects:  55% (16/29)   Compressing objects:  58% (17/29)   Compressing objects:  62% (18/29)   Compressing objects:  65% (19/29)   Compressing objects:  68% (20/29)   Compressing objects:  72% (21/29)   Compressing objects:  75% (22/29)   Compressing objects:  79% (23/29)   Compressing objects:  82% (24/29)   Compressing objects:  86% (25/29)   Compressing objects:  89% (26/29)   Compressing objects:  93% (27/29)   Compressing objects:  96% (28/29)   Compressing objects: 100% (29/29)   Compressing objects: 100% (29/29), done.
+Writing objects:   3% (1/33)   Writing objects:   6% (2/33)   Writing objects:   9% (3/33)   Writing objects:  12% (4/33)   Writing objects:  15% (5/33)   Writing objects:  18% (6/33)   Writing objects:  21% (7/33)   Writing objects:  24% (8/33)   Writing objects:  27% (9/33)   Writing objects:  30% (10/33)   Writing objects:  33% (11/33)   Writing objects:  36% (12/33)   Writing objects:  39% (13/33)   Writing objects:  42% (14/33)   Writing objects:  45% (15/33)   Writing objects:  48% (16/33)   Writing objects:  51% (17/33)   Writing objects:  54% (18/33)   Writing objects:  57% (19/33)   Writing objects:  60% (20/33)   Writing objects:  63% (21/33)   Writing objects:  66% (22/33)   Writing objects:  69% (23/33)   Writing objects:  72% (24/33)   Writing objects:  75% (25/33)   Writing objects:  78% (26/33)   Writing objects:  81% (27/33)   Writing objects:  84% (28/33)   Writing objects:  87% (29/33)   Writing objects:  90% (30/33)   Writing objects:  93% (31/33)   Writing objects:  96% (32/33)   Writing objects: 100% (33/33)   Writing objects: 100% (33/33), 645.84 KiB | 0 bytes/s, done.
+Total 33 (delta 19), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/19)   [Kremote: Resolving deltas:   5% (1/19)   [Kremote: Resolving deltas:  10% (2/19)   [Kremote: Resolving deltas:  15% (3/19)   [Kremote: Resolving deltas:  21% (4/19)   [Kremote: Resolving deltas:  26% (5/19)   [Kremote: Resolving deltas:  31% (6/19)   [Kremote: Resolving deltas:  36% (7/19)   [Kremote: Resolving deltas:  42% (8/19)   [Kremote: Resolving deltas:  47% (9/19)   [Kremote: Resolving deltas:  52% (10/19)   [Kremote: Resolving deltas:  57% (11/19)   [Kremote: Resolving deltas:  63% (12/19)   [Kremote: Resolving deltas:  68% (13/19)   [Kremote: Resolving deltas:  73% (14/19)   [Kremote: Resolving deltas:  78% (15/19)   [Kremote: Resolving deltas:  84% (16/19)   [Kremote: Resolving deltas:  89% (17/19)   [Kremote: Resolving deltas:  94% (18/19)   [Kremote: Resolving deltas: 100% (19/19)   [Kremote: Resolving deltas: 100% (19/19), completed with 19 local objects.[K
+To git@github.com:nstrayer/network3d.git
+   c70cfd7..23b865f  master -> master
+[K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ npm run watch
+[37;40mnpm[0m [0m[31;40mERR![0m [0m[35mpath[0m /home/nick/fast_bind/network3d/package.json
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35mcode[0m ENOENT
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35merrno[0m -2
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35msyscall[0m open
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35menoent[0m ENOENT: no such file or directory, open '/home/nick/fast_bind/network3d/package.json'
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35menoent[0m This is related to npm not being able to find a file.
+[0m[37;40mnpm[0m [0m[31;40mERR![0m [0m[35menoent[0m 
+[0m
+[33m
+   ╭─────────────────────────────────────╮[39m
+   [33m│[39m                                     [33m│[39m
+   [33m│[39m   Update available [2m5.5.1[22m[0m → [0m[32m5.8.0[39m    [33m│[39m
+   [33m│[39m     Run [36mnpm i -g npm[39m to update      [33m│[39m
+   [33m│[39m                                     [33m│[39m
+[33m   ╰─────────────────────────────────────╯
+[39m
+
+[37;40mnpm[0m [0m[31;40mERR![0m[35m[0m A complete log of this run can be found in:
+[0m[37;40mnpm[0m [0m[31;40mERR![0m[35m[0m     /home/nick/.npm/_logs/2018-05-01T16_42_09_562Z-debug.log
+[0m]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ cd inst/
+]0;/home/nick/fast_bind/network3d/inst]0;nick@compooper: ~/fast_bind/network3d/inst[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst[00m$ cd htmlwidgets/
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ cd htmlwidgets/[7Pinst/npm run watchjupyter notebook[3Pnpm run watch'
+> ^C
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ 
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ npm run watch'
+> ^C
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ npm run watch'[K
+
+> htmlwidgets@1.0.0 watch /home/nick/fast_bind/network3d/inst/htmlwidgets
+> watchify src/main.js -o network3d.js
+

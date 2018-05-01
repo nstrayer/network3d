@@ -7,14 +7,17 @@
     "folds" : "",
     "hash" : "0",
     "id" : "308111DA",
-    "lastKnownWriteTime" : 1523046103,
-    "last_content_update" : 1523046103608,
+    "lastKnownWriteTime" : 1525193365,
+    "last_content_update" : 1525193365640,
     "path" : "~/fast_bind/network3d/R/network3d.R",
     "project_path" : "R/network3d.R",
     "properties" : {
-        "cursorPosition" : "53,11",
+        "cursorPosition" : "11,465",
         "scrollLine" : "0"
     },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
     "relative_order" : 2,
     "source_on_save" : false,
     "source_window" : "",

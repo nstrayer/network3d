@@ -4,17 +4,20 @@
     "created" : 1522945597913.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "72|21|77|2|\n80|24|90|2|\n93|20|106|2|\n109|23|115|2|\n118|13|123|2|\n147|25|151|2|\n154|20|170|2|\n259|25|268|2|\n272|11|351|2|\n",
+    "folds" : "75|21|80|2|\n83|24|93|2|\n96|20|109|2|\n112|23|118|2|\n121|13|126|2|\n129|14|148|2|\n150|25|154|2|\n157|20|173|2|\n264|25|273|2|\n",
     "hash" : "0",
     "id" : "48E45900",
-    "lastKnownWriteTime" : 1523044453,
-    "last_content_update" : 1523044453677,
+    "lastKnownWriteTime" : 1525193026,
+    "last_content_update" : 1525193026047,
     "path" : "~/fast_bind/network3d/inst/htmlwidgets/src/PhewasNetwork.js",
     "project_path" : "inst/htmlwidgets/src/PhewasNetwork.js",
     "properties" : {
-        "cursorPosition" : "24,25",
-        "scrollLine" : "0"
+        "cursorPosition" : "191,51",
+        "scrollLine" : "130"
     },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
     "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
