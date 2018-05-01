@@ -4,17 +4,20 @@
     "created" : 1522953270780.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "",
+    "folds" : "5|88|29|0|\n",
     "hash" : "0",
     "id" : "8E47DDDB",
-    "lastKnownWriteTime" : 1523289410,
-    "last_content_update" : 1523289410631,
+    "lastKnownWriteTime" : 1525193411,
+    "last_content_update" : 1525193411244,
     "path" : "~/fast_bind/network3d/build_and_run.R",
     "project_path" : "build_and_run.R",
     "properties" : {
-        "cursorPosition" : "38,28",
-        "scrollLine" : "23"
+        "cursorPosition" : "42,0",
+        "scrollLine" : "0"
     },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
     "relative_order" : 3,
     "source_on_save" : false,
     "source_window" : "",

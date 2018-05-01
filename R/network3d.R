@@ -1,7 +1,7 @@
 #' network3d
 #'
 #' Render a 3d network visualization in an htmlwidget. Calculates the layout simulation within javascript and is fast and lightweight.
-#' @param vertices Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'name' column for text of mouseover tooltip, and 'interactive' boolean column for if the node can be interacted with or not.
+#' @param vertices Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'name' column for text of mouseover tooltip, and 'selectable' boolean column for if the node can be interacted with or not.
 #' @param edges Dataframe with two columns: 'source' or the id of the node edge is coming from, and 'target' or id of node edge is going to.
 #' @param node_outline_black Outline the node circles in black? Default (FALSE) is white.
 #' @param background_color Color of background of plot. Any css valid color will work.
@@ -9,10 +9,9 @@
 #' @param raycast_res Thickness of invisible raycasting selection beam. Bigger values will make it easier to select but will cause more misselections.
 #' @param edge_color Color of lines conencting node/vertices.
 #' @param edge_opacity Transparency of lines connecting node/vertices.
-#' @param interactive Is the network interactive? I.e. does mousing over a node display what's in its 'name' column?
+#' @param interactive Is the network interactive? I.e. does mousing over a node display what's in its 'name' column? When this is enabled (default) the standard behavior is to show names for every node. If only a subset of nodes is desired adding the logical column \code{selectable} to the vertices dataframe with \code{TRUE} for the vertices you want selected and \code{FALSE} for the nodes you don't want selected will allow finer-grain precision of interaction.
 #' @param selection_size_mult How much do moused over nodes get expanded?
 #' @param tooltip_offset Tooltip that shows whatever's in the 'name' field should be offset by how much? (this is in screen pixels) Too little and the tip obscures your nodes, too much and it can be hard to tell what you've selected.
-#' @param select_all Do we show tooltip for every node or just nodes with TRUE in a column 'selectable' in the node values?
 #' @param max_iterations Number of iterations the layout simulation runs.
 #' @param manybody_strength Attractive force between nodes irrespective of links. See https://github.com/d3/d3-force#many-body for more details/
 #' @param link_strength attractive force of links. Falsy values default to a function of number of connections. See https://github.com/d3/d3-force#links for more details.

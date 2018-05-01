@@ -54,4 +54,39 @@ Total 38 (delta 20), reused 0 (delta 0)
 remote: Resolving deltas:   0% (0/20)   [Kremote: Resolving deltas:   5% (1/20)   [Kremote: Resolving deltas:  10% (2/20)   [Kremote: Resolving deltas:  15% (3/20)   [Kremote: Resolving deltas:  20% (4/20)   [Kremote: Resolving deltas:  25% (5/20)   [Kremote: Resolving deltas:  30% (6/20)   [Kremote: Resolving deltas:  35% (7/20)   [Kremote: Resolving deltas:  40% (8/20)   [Kremote: Resolving deltas:  45% (9/20)   [Kremote: Resolving deltas:  50% (10/20)   [Kremote: Resolving deltas:  55% (11/20)   [Kremote: Resolving deltas:  65% (13/20)   [Kremote: Resolving deltas:  70% (14/20)   [Kremote: Resolving deltas:  75% (15/20)   [Kremote: Resolving deltas:  80% (16/20)   [Kremote: Resolving deltas:  85% (17/20)   [Kremote: Resolving deltas:  90% (18/20)   [Kremote: Resolving deltas:  95% (19/20)   [Kremote: Resolving deltas: 100% (20/20)   [Kremote: Resolving deltas: 100% (20/20), completed with 19 local objects.[K
 To git@github.com:nstrayer/network3d.git
    bdb2a3c..8d8e650  master -> master
-]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ 
+[K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "fixed up the interactive profiles a bit[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit checkout -b interactive[K[K[K[KtionFixes
+M	.Rproj.user/4CADD3E8/console06/5C52B496
+M	.Rproj.user/4CADD3E8/console06/5C52B496.env
+M	.Rproj.user/4CADD3E8/console06/EDD55FBD
+M	.Rproj.user/4CADD3E8/console06/INDEX001
+M	.Rproj.user/4CADD3E8/pcs/files-pane.pper
+M	.Rproj.user/4CADD3E8/pcs/source-pane.pper
+M	.Rproj.user/4CADD3E8/pcs/windowlayoutstate.pper
+M	.Rproj.user/4CADD3E8/pcs/workbench-pane.pper
+M	.Rproj.user/4CADD3E8/sources/prop/1E5E18C2
+M	.Rproj.user/4CADD3E8/sources/prop/2AFC0D8D
+M	.Rproj.user/4CADD3E8/sources/prop/6963D976
+M	.Rproj.user/4CADD3E8/sources/prop/89545B81
+M	.Rproj.user/4CADD3E8/sources/prop/9601746D
+M	.Rproj.user/4CADD3E8/sources/prop/9DBEE242
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/20499BC7
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA-contents
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/342378CA
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/405DAFC
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/48E45900
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/48E45900-contents
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/6AE7926E
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/70F2EB8E
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/8E47DDDB
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/8E47DDDB-contents
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/D8C1FF9F
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/F8E9D73A
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/lock_file
+M	R/network3d.R
+M	build_and_run.R
+M	inst/htmlwidgets/network3d.js
+M	inst/htmlwidgets/src/PhewasNetwork.js
+M	man/network3d.Rd
+Switched to a new branch 'interactionFixes'
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "fixed up the interactive behavior by forcing the detection of the selecable co[K[K[K[K[K[K[K[Kctable col umn"

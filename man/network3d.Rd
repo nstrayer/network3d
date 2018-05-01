@@ -14,7 +14,7 @@ network3d(vertices, edges, camera = list(), controls = list(),
   height = NULL, elementId = NULL)
 }
 \arguments{
-\item{vertices}{Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'name' column for text of mouseover tooltip, and 'interactive' boolean column for if the node can be interacted with or not.}
+\item{vertices}{Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'name' column for text of mouseover tooltip, and 'selectable' boolean column for if the node can be interacted with or not.}
 
 \item{edges}{Dataframe with two columns: 'source' or the id of the node edge is coming from, and 'target' or id of node edge is going to.}
 
@@ -30,13 +30,11 @@ network3d(vertices, edges, camera = list(), controls = list(),
 
 \item{edge_opacity}{Transparency of lines connecting node/vertices.}
 
-\item{interactive}{Is the network interactive? I.e. does mousing over a node display what's in its 'name' column?}
+\item{interactive}{Is the network interactive? I.e. does mousing over a node display what's in its 'name' column? When this is enabled (default) the standard behavior is to show names for every node. If only a subset of nodes is desired adding the logical column \code{selectable} to the vertices dataframe with \code{TRUE} for the vertices you want selected and \code{FALSE} for the nodes you don't want selected will allow finer-grain precision of interaction.}
 
 \item{selection_size_mult}{How much do moused over nodes get expanded?}
 
 \item{tooltip_offset}{Tooltip that shows whatever's in the 'name' field should be offset by how much? (this is in screen pixels) Too little and the tip obscures your nodes, too much and it can be hard to tell what you've selected.}
-
-\item{select_all}{Do we show tooltip for every node or just nodes with TRUE in a column 'selectable' in the node values?}
 
 \item{show_simulation_progress}{Show small popup while layout is being calculated so user knows when it has finished?}
 
