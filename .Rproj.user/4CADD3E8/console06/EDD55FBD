@@ -90,3 +90,34 @@ M	inst/htmlwidgets/src/PhewasNetwork.js
 M	man/network3d.Rd
 Switched to a new branch 'interactionFixes'
 ]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit "fixed up the interactive behavior by forcing the detection of the selecable co[K[K[K[K[K[K[K[Kctable col umn"
+[interactionFixes 79e919d] fixed up the interactive behavior by forcing the detection of the selectable column
+ 33 files changed, 201 insertions(+), 84 deletions(-)
+ rewrite .Rproj.user/4CADD3E8/console06/INDEX001 (92%)
+Counting objects: 44, done.
+Delta compression using up to 8 threads.
+Compressing objects:   2% (1/40)   Compressing objects:   5% (2/40)   Compressing objects:   7% (3/40)   Compressing objects:  10% (4/40)   Compressing objects:  12% (5/40)   Compressing objects:  15% (6/40)   Compressing objects:  17% (7/40)   Compressing objects:  20% (8/40)   Compressing objects:  22% (9/40)   Compressing objects:  25% (10/40)   Compressing objects:  27% (11/40)   Compressing objects:  30% (12/40)   Compressing objects:  32% (13/40)   Compressing objects:  35% (14/40)   Compressing objects:  37% (15/40)   Compressing objects:  40% (16/40)   Compressing objects:  42% (17/40)   Compressing objects:  45% (18/40)   Compressing objects:  47% (19/40)   Compressing objects:  50% (20/40)   Compressing objects:  52% (21/40)   Compressing objects:  55% (22/40)   Compressing objects:  57% (23/40)   Compressing objects:  60% (24/40)   Compressing objects:  62% (25/40)   Compressing objects:  65% (26/40)   Compressing objects:  67% (27/40)   Compressing objects:  70% (28/40)   Compressing objects:  72% (29/40)   Compressing objects:  75% (30/40)   Compressing objects:  77% (31/40)   Compressing objects:  80% (32/40)   Compressing objects:  82% (33/40)   Compressing objects:  85% (34/40)   Compressing objects:  87% (35/40)   Compressing objects:  90% (36/40)   Compressing objects:  92% (37/40)   Compressing objects:  95% (38/40)   Compressing objects:  97% (39/40)   Compressing objects: 100% (40/40)   Compressing objects: 100% (40/40), done.
+Writing objects:   2% (1/44)   Writing objects:   4% (2/44)   Writing objects:   6% (3/44)   Writing objects:   9% (4/44)   Writing objects:  11% (5/44)   Writing objects:  13% (6/44)   Writing objects:  15% (7/44)   Writing objects:  18% (8/44)   Writing objects:  20% (9/44)   Writing objects:  22% (10/44)   Writing objects:  25% (11/44)   Writing objects:  27% (12/44)   Writing objects:  29% (13/44)   Writing objects:  31% (14/44)   Writing objects:  34% (15/44)   Writing objects:  36% (16/44)   Writing objects:  38% (17/44)   Writing objects:  40% (18/44)   Writing objects:  43% (19/44)   Writing objects:  45% (20/44)   Writing objects:  47% (21/44)   Writing objects:  50% (22/44)   Writing objects:  52% (23/44)   Writing objects:  54% (24/44)   Writing objects:  56% (25/44)   Writing objects:  59% (26/44)   Writing objects:  61% (27/44)   Writing objects:  63% (28/44)   Writing objects:  65% (29/44)   Writing objects:  68% (30/44)   Writing objects:  70% (31/44)   Writing objects:  72% (32/44)   Writing objects:  75% (33/44)   Writing objects:  77% (34/44)   Writing objects:  79% (35/44)   Writing objects:  81% (36/44)   Writing objects:  84% (37/44)   Writing objects:  86% (38/44)   Writing objects:  88% (39/44)   Writing objects:  90% (40/44)   Writing objects:  93% (41/44)   Writing objects:  95% (42/44)   Writing objects:  97% (43/44)   Writing objects: 100% (44/44)   Writing objects: 100% (44/44), 6.92 KiB | 0 bytes/s, done.
+Total 44 (delta 29), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/29)   [Kremote: Resolving deltas:   3% (1/29)   [Kremote: Resolving deltas:   6% (2/29)   [Kremote: Resolving deltas:  10% (3/29)   [Kremote: Resolving deltas:  13% (4/29)   [Kremote: Resolving deltas:  17% (5/29)   [Kremote: Resolving deltas:  20% (6/29)   [Kremote: Resolving deltas:  24% (7/29)   [Kremote: Resolving deltas:  27% (8/29)   [Kremote: Resolving deltas:  31% (9/29)   [Kremote: Resolving deltas:  34% (10/29)   [Kremote: Resolving deltas:  37% (11/29)   [Kremote: Resolving deltas:  41% (12/29)   [Kremote: Resolving deltas:  44% (13/29)   [Kremote: Resolving deltas:  48% (14/29)   [Kremote: Resolving deltas:  51% (15/29)   [Kremote: Resolving deltas:  55% (16/29)   [Kremote: Resolving deltas:  58% (17/29)   [Kremote: Resolving deltas:  62% (18/29)   [Kremote: Resolving deltas:  65% (19/29)   [Kremote: Resolving deltas:  68% (20/29)   [Kremote: Resolving deltas:  72% (21/29)   [Kremote: Resolving deltas:  75% (22/29)   [Kremote: Resolving deltas:  79% (23/29)   [Kremote: Resolving deltas:  82% (24/29)   [Kremote: Resolving deltas:  86% (25/29)   [Kremote: Resolving deltas:  89% (26/29)   [Kremote: Resolving deltas:  93% (27/29)   [Kremote: Resolving deltas:  96% (28/29)   [Kremote: Resolving deltas: 100% (29/29)   [Kremote: Resolving deltas: 100% (29/29), completed with 29 local objects.[K
+To git@github.com:nstrayer/network3d.git
+ * [new branch]      interactionFixes -> interactionFixes
+[K]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ lgit[K[K[K[Kls
+total 2.1M
+drwxr-xr-x  8 nick nick 4.0K May 11 11:28 [0m[01;34m.[0m
+drwx------ 32 nick nick 4.0K May  8 16:30 [01;34m..[0m
+-rw-r--r--  1 nick nick 1.7K May 11 11:52 build_and_run.R
+drwxr-xr-x  2 nick nick 4.0K Apr  9 09:26 [01;34mdata[0m
+-rw-r--r--  1 nick nick  373 Apr  9 09:29 DESCRIPTION
+drwxr-xr-x  8 nick nick 4.0K May 11 11:53 [01;34m.git[0m
+-rw-r--r--  1 nick nick   42 Apr  9 10:57 .gitignore
+drwxr-xr-x  3 nick nick 4.0K Apr  5 10:36 [01;34minst[0m
+drwxr-xr-x  2 nick nick 4.0K Apr  6 15:02 [01;34mman[0m
+-rw-r--r--  1 nick nick  132 Apr  6 15:11 NAMESPACE
+-rw-r--r--  1 nick nick  356 May 11 11:28 network3d.Rproj
+drwxr-xr-x  2 nick nick 4.0K Apr  5 11:58 [01;34mR[0m
+-rw-r--r--  1 nick nick   28 Apr  5 10:36 .Rbuildignore
+-rw-r--r--  1 nick nick  743 Apr  6 15:05 README.md
+drwxr-xr-x  4 nick nick 4.0K Apr  5 10:36 [01;34m.Rproj.user[0m
+-rw-r--r--  1 nick nick 2.1M Apr  9 10:56 testing_layouts.html
+-rw-r--r--  1 nick nick 1.4K Apr  9 10:49 testing_layouts.rmd
+]0;/home/nick/fast_bind/network3d]0;nick@compooper: ~/fast_bind/network3d[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d[00m$ g[Klgit "custom tooltips are in and it was way e4asier[K[K[K[K[K[Kasier than I ae[K[K[Ke[K expected"

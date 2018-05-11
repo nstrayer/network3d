@@ -431,3 +431,42 @@ To git@github.com:nstrayer/network3d.git
 > htmlwidgets@1.0.0 watch /home/nick/fast_bind/network3d/inst/htmlwidgets
 > watchify src/main.js -o network3d.js
 
+[K]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ git branch
+* [32minteractionFixes[m
+  master[m
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ git checkout -b customTooltiop[K[Kps
+M	.Rproj.user/4CADD3E8/console06/5C52B496
+M	.Rproj.user/4CADD3E8/console06/5C52B496.env
+M	.Rproj.user/4CADD3E8/console06/EDD55FBD
+M	.Rproj.user/4CADD3E8/console06/EDD55FBD.env
+M	.Rproj.user/4CADD3E8/console06/INDEX001
+M	.Rproj.user/4CADD3E8/pcs/files-pane.pper
+M	.Rproj.user/4CADD3E8/pcs/source-pane.pper
+M	.Rproj.user/4CADD3E8/pcs/windowlayoutstate.pper
+M	.Rproj.user/4CADD3E8/sources/prop/1E5E18C2
+M	.Rproj.user/4CADD3E8/sources/prop/89545B81
+M	.Rproj.user/4CADD3E8/sources/prop/9601746D
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/308111DA
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/48E45900
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/8E47DDDB
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/8E47DDDB-contents
+M	.Rproj.user/4CADD3E8/sources/s-2bf25557/lock_file
+M	build_and_run.R
+Switched to a new branch 'customTooltips'
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ ls
+total 212K
+drwxr-xr-x   5 nick nick 4.0K Apr  5 16:07 [0m[01;34m.[0m
+drwxr-xr-x   3 nick nick 4.0K Apr  5 10:36 [01;34m..[0m
+drwxr-xr-x   2 nick nick 4.0K Apr  5 10:37 [01;34mlib[0m
+-rw-r--r--   1 nick nick 112K May  1 11:43 network3d.js
+-rw-r--r--   1 nick nick  254 Apr  5 10:38 network3d.yaml
+drwxr-xr-x 176 nick nick 4.0K Apr  5 16:07 [01;34mnode_modules[0m
+-rw-r--r--   1 nick nick  18K Apr  5 11:44 oldNetworkJS.js
+-rw-r--r--   1 nick nick  465 Apr  5 16:07 package.json
+-rw-r--r--   1 nick nick  52K Apr  5 16:07 package-lock.json
+drwxr-xr-x   2 nick nick 4.0K Apr  6 13:44 [01;34msrc[0m
+]0;/home/nick/fast_bind/network3d/inst/htmlwidgets]0;nick@compooper: ~/fast_bind/network3d/inst/htmlwidgets[01;32mnick@compooper[00m:[01;34m~/fast_bind/network3d/inst/htmlwidgets[00m$ npm [K[K[K[Knprm ur[K[K[K[K[K[Km[Kpm run wr[Katch
+
+> htmlwidgets@1.0.0 watch /home/nick/fast_bind/network3d/inst/htmlwidgets
+> watchify src/main.js -o network3d.js
+

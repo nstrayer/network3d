@@ -5,7 +5,15 @@ collabs <- read_tsv('data/ca-GrQc.txt', skip = 4, col_names = c('source', 'targe
 
 makeNetworkData <- function(size = 500, random_sizes = FALSE, test_interactive = FALSE){
   vertices <- data_frame(id = unique(collabs$source)) %>%
-    mutate(index = 1:n(), color = 'steelblue', name = as.character(index)) %>%
+    mutate(
+      index = 1:n(),
+      color = 'steelblue',
+      name = as.character(index),
+      tooltip = paste0(
+        '<h2>', index, '</h2>',
+        '<p> Here are some random numbers ', rnorm(n()), '</p>'
+      )
+    ) %>%
     head(size)
 
   if(random_sizes){
@@ -32,10 +40,14 @@ makeNetworkData <- function(size = 500, random_sizes = FALSE, test_interactive =
 
 data <- makeNetworkData(1000, test_interactive = TRUE)
 
-devtools::document()
+data$vertices$tooltip = rnorm(1000)
+# data <- makeNetworkData(1000, test_interactive = FALSE)
+
+# devtools::document()
 devtools::install()
 network3d::network3d(
   vertices = data$vertices, edges = data$edges,
+  html_tooltip = TRUE,
   max_iterations = 75,
   node_size = 0.05,
   edge_opacity = 0.1,

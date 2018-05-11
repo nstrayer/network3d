@@ -3037,8 +3037,8 @@ class phewasNetwork{
           // expand selected node
           this.expandNode(this.currentlySelected.node_index);
 
-          // update tooltip with name of node.
-          this.tooltip.update(this.currentlySelected.name, this.mouseRaw);
+          // update tooltip with tooltip value of the node.
+          this.tooltip.update(this.currentlySelected.tooltip, this.mouseRaw);
 
         } else {
           // if this is the first frame without something selected, reset the sizes
@@ -3228,6 +3228,7 @@ class tooltip {
 
     this.tip = d3.select(el)
       .append('div')
+      .attr('class', 'tooltip')
       .html('')
       .style('background', 'white')
       .style('border-radius', '10px')
@@ -3250,7 +3251,7 @@ class tooltip {
 
   update(body, mousePos){
     this.tip
-      .html(`<h3>${body}</h3>`)
+      .html(body)
       .style('top',  `${mousePos.y + this.offset}px`)
       .style('left', `${mousePos.x + this.offset}px`)
       .style('display', 'block');
