@@ -3228,7 +3228,7 @@ class tooltip {
 
     this.tip = d3.select(el)
       .append('div')
-      .attr('class', 'tooltip')
+      .attr('class', 'network_tooltip')
       .html('')
       .style('background', 'white')
       .style('border-radius', '10px')

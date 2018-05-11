@@ -32,7 +32,7 @@ network3d(vertices, edges, camera = list(), controls = list(),
 
 \item{interactive}{Is the network interactive? I.e. does mousing over a node display what's in its 'name' column? When this is enabled (default) the standard behavior is to show names for every node. If only a subset of nodes is desired adding the logical column \code{selectable} to the vertices dataframe with \code{TRUE} for the vertices you want selected and \code{FALSE} for the nodes you don't want selected will allow finer-grain precision of interaction.}
 
-\item{html_tooltip}{Are the values in the \code{tooltip} column of the vertices html? If \code{FALSE}(default) then all text within the column will be wrapped in the html tags \code{<h3>} in order to make it larger. Set to \code{TRUE} to allow arbitrary html strings to be used for custom appearance. All html will be appended inside of a \code{div} tag with the class of \code{.tooltip} so if needed custom css can be placed elsewhere in your page targeting the tooltip. E.g. \code{.tooltip p\{\}} would style all \code{p} elements within your tooltip.}
+\item{html_tooltip}{Are the values in the \code{tooltip} column of the vertices html? If \code{FALSE}(default) then all text within the column will be wrapped in the html tags \code{<h3>} in order to make it larger. Set to \code{TRUE} to allow arbitrary html strings to be used for custom appearance. All html will be appended inside of a \code{div} tag with the class of \code{.network_tooltip} so if needed custom css can be placed elsewhere in your page targeting the tooltip. E.g. \code{.network_tooltip p\{\}} would style all \code{p} elements within your tooltip.}
 
 \item{selection_size_mult}{How much do moused over nodes get expanded?}
 
