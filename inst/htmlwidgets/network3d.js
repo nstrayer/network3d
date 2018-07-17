@@ -5253,10 +5253,12 @@ module.exports = function generatePointStaticAttrs(nodes, default_size){
 };
 
 },{}],15:[function(require,module,exports){
+const d3_force = require('d3-force-3d');
+
 module.exports = function(manybody_strength, link_strength, constant_links, connection_counts){
   //const maxCount = Math.max(...Object.values(connection_counts));
 
-  const link_strength_func = links => d3.forceLink(links)
+  const link_strength_func = links => d3_force.forceLink(links)
     .id(d => d.id)
     .strength(
       link => constant_links ?
@@ -5264,13 +5266,13 @@ module.exports = function(manybody_strength, link_strength, constant_links, conn
         (1 / Math.min(connection_counts[link.source.id],connection_counts[link.target.id]))
     );
 
-  const node_strength_func = d3.forceManyBody()
+  const node_strength_func = d3_force.forceManyBody()
     .strength(manybody_strength);
 
   return {link_strength_func, node_strength_func};
 };
 
-},{}],16:[function(require,module,exports){
+},{"d3-force-3d":4}],16:[function(require,module,exports){
 // build custom shader material for nodes to avoid using sprites.
 module.exports = function makeNodeMaterial(blackOutline){
   // --------------------------------------------------------------
