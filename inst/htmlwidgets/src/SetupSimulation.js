@@ -1,11 +1,13 @@
+
+const d3_force = require('d3-force-3d');
 const makeLinkNodeStrengths = require('./MakeLinkNodeStrengths.js');
 
 // setup the 3d simulation code
 module.exports = function setupSimulation(nodes, links, connection_counts, manybody_strength, link_strength, constant_links){
-
+  
    const {link_strength_func, node_strength_func} = makeLinkNodeStrengths(manybody_strength, link_strength, constant_links, connection_counts);
 
-   const sim = d3.forceSimulation()
+   const sim = d3_force.forceSimulation()
     .numDimensions(3)
     .nodes(nodes)
     .force("link", link_strength_func(links))

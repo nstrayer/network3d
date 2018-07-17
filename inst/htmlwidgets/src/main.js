@@ -10,7 +10,7 @@ HTMLWidgets.widget({
   factory: function(el, width, height) {
 
     const plot = new PhewasNetwork(el, width, height);
-
+    console.log("the stuff is updating!")
     return {
 
       renderValue: function(x) {

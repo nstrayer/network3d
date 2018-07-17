@@ -30,9 +30,9 @@ makeNetworkData <- function(size = 500, random_sizes = FALSE, test_interactive =
 }
 
 
-data <- makeNetworkData(1000, test_interactive = TRUE)
+data <- makeNetworkData(50, test_interactive = TRUE)
 
-devtools::document()
+# devtools::document()
 devtools::install()
 network3d::network3d(
   vertices = data$vertices, edges = data$edges,

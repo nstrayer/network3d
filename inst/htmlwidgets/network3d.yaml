@@ -11,4 +11,4 @@ dependencies:
    script:
      - d3.v5.min.js
      - d3-octree.min.js
-     - d3_force_3d.js
+     
