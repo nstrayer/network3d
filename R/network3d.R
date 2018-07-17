@@ -1,7 +1,7 @@
 #' network3d
 #'
 #' Render a 3d network visualization in an htmlwidget. Calculates the layout simulation within javascript and is fast and lightweight.
-#' @param vertices Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'name' column for text of mouseover tooltip, and 'selectable' boolean column for if the node can be interacted with or not.
+#' @param vertices Dataframe with at least one column: id, optionally a 'color' column with css valid colors of nodes, 'size' column with sizes of each vertice, 'tooltip' column for text/html of mouseover tooltip, and 'selectable' boolean column for if the node can be interacted with or not.
 #' @param edges Dataframe with two columns: 'source' or the id of the node edge is coming from, and 'target' or id of node edge is going to.
 #' @param node_outline_black Outline the node circles in black? Default (FALSE) is white.
 #' @param background_color Color of background of plot. Any css valid color will work.
@@ -10,6 +10,7 @@
 #' @param edge_color Color of lines conencting node/vertices.
 #' @param edge_opacity Transparency of lines connecting node/vertices.
 #' @param interactive Is the network interactive? I.e. does mousing over a node display what's in its 'name' column? When this is enabled (default) the standard behavior is to show names for every node. If only a subset of nodes is desired adding the logical column \code{selectable} to the vertices dataframe with \code{TRUE} for the vertices you want selected and \code{FALSE} for the nodes you don't want selected will allow finer-grain precision of interaction.
+#' @param html_tooltip Are the values in the \code{tooltip} column of the vertices html? If \code{FALSE}(default) then all text within the column will be wrapped in the html tags \code{<h3>} in order to make it larger. Set to \code{TRUE} to allow arbitrary html strings to be used for custom appearance. All html will be appended inside of a \code{div} tag with the class of \code{.network_tooltip} so if needed custom css can be placed elsewhere in your page targeting the tooltip. E.g. \code{.network_tooltip p\{\}} would style all \code{p} elements within your tooltip.
 #' @param selection_size_mult How much do moused over nodes get expanded?
 #' @param tooltip_offset Tooltip that shows whatever's in the 'name' field should be offset by how much? (this is in screen pixels) Too little and the tip obscures your nodes, too much and it can be hard to tell what you've selected.
 #' @param max_iterations Number of iterations the layout simulation runs.
@@ -55,6 +56,7 @@ network3d <- function(
   edge_color = 0xbababa,
   edge_opacity = 0.1,
   interactive = TRUE,
+  html_tooltip = FALSE,
   selection_size_mult = 1.5,
   tooltip_offset = 15,
   select_all = TRUE,
@@ -65,7 +67,12 @@ network3d <- function(
   static_length_strength = FALSE,
   force_explorer = FALSE,
   width = NULL, height = NULL, elementId = NULL) {
-
+  
+  # reformat the tooltip column with h2s if needed.
+  if (!html_tooltip) {
+    vertices$tooltip = paste0('<h3>', vertices$tooltip, '</h3>')
+  }
+  
   # forward options using x
   x = list(
     data = list(vertices = vertices, edges = edges),

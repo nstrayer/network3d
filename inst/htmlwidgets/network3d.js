@@ -5640,8 +5640,8 @@ class phewasNetwork{
           // expand selected node
           this.expandNode(this.currentlySelected.node_index);
 
-          // update tooltip with name of node.
-          this.tooltip.update(this.currentlySelected.name, this.mouseRaw);
+          // update tooltip with tooltip value of the node.
+          this.tooltip.update(this.currentlySelected.tooltip, this.mouseRaw);
 
         } else {
           // if this is the first frame without something selected, reset the sizes
@@ -5663,7 +5663,6 @@ class phewasNetwork{
 }
 
 module.exports = phewasNetwork;
-
 },{"./BuildEdges.js":9,"./BuildNodes.js":10,"./CalcConnectionCounts.js":11,"./GenerateEdgePositions.js":12,"./GeneratePointPositions.js":13,"./GeneratePointStaticAttrs.js":14,"./MakeLinkNodeStrengths.js":15,"./ProgressMessage.js":18,"./SetupCamera.js":19,"./SetupControls.js":20,"./SetupRaycaster.js":21,"./SetupRenderer.js":22,"./SetupScene.js":23,"./SetupSimulation.js":24,"./Tooltip.js":25}],18:[function(require,module,exports){
 class ProgressMessage {
   constructor(el){
@@ -5833,6 +5832,7 @@ class tooltip {
 
     this.tip = d3.select(el)
       .append('div')
+      .attr('class', 'network_tooltip')
       .html('')
       .style('background', 'white')
       .style('border-radius', '10px')
@@ -5855,7 +5855,7 @@ class tooltip {
 
   update(body, mousePos){
     this.tip
-      .html(`<h3>${body}</h3>`)
+      .html(body)
       .style('top',  `${mousePos.y + this.offset}px`)
       .style('left', `${mousePos.x + this.offset}px`)
       .style('display', 'block');
@@ -5864,7 +5864,6 @@ class tooltip {
 
 
 module.exports = tooltip;
-
 },{}],26:[function(require,module,exports){
 const PhewasNetwork = require('./PhewasNetwork.js');
 const dat = require('dat.gui');

@@ -334,8 +334,8 @@ class phewasNetwork{
           // expand selected node
           this.expandNode(this.currentlySelected.node_index);
 
-          // update tooltip with name of node.
-          this.tooltip.update(this.currentlySelected.name, this.mouseRaw);
+          // update tooltip with tooltip value of the node.
+          this.tooltip.update(this.currentlySelected.tooltip, this.mouseRaw);
 
         } else {
           // if this is the first frame without something selected, reset the sizes

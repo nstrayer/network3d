@@ -4,6 +4,7 @@ class tooltip {
 
     this.tip = d3.select(el)
       .append('div')
+      .attr('class', 'network_tooltip')
       .html('')
       .style('background', 'white')
       .style('border-radius', '10px')
@@ -26,7 +27,7 @@ class tooltip {
 
   update(body, mousePos){
     this.tip
-      .html(`<h3>${body}</h3>`)
+      .html(body)
       .style('top',  `${mousePos.y + this.offset}px`)
       .style('left', `${mousePos.x + this.offset}px`)
       .style('display', 'block');

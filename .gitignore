@@ -1,5 +1,5 @@
-*.Rproj
-
-.Rproj.user
+*.Rproj*
 
 testing_layouts.rmd
+
+*node_modules/
