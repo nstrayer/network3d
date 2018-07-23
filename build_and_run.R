@@ -2,7 +2,7 @@ library(tidyverse)
 
 #https://snap.stanford.edu/data/ca-GrQc.html
 collabs <- read_tsv('data/ca-GrQc.txt', skip = 4, col_names = c('source', 'target'))
-
+r7gy678u
 makeNetworkData <- function(size = 500, random_sizes = FALSE, test_interactive = FALSE){
   vertices <- data_frame(id = unique(collabs$source)) %>%
     mutate(
@@ -39,7 +39,7 @@ makeNetworkData <- function(size = 500, random_sizes = FALSE, test_interactive =
 
 
 data <- makeNetworkData(50, test_interactive = TRUE)
-data$vertices$tooltip = rnorm(1000)
+# data$vertices$tooltip = rnorm(1000)
 
 # devtools::document()
 devtools::install()
